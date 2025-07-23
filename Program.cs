@@ -26,16 +26,16 @@ namespace Homework_5._3
          Console.WriteLine();
 
          int[] expe2 = SortArray(expected);
-         foreach (int r in expe)
+         foreach (int j in expe)
          {
-            Console.Write(r + " ");
+            Console.Write(j + " ");
          }
          Console.WriteLine();
 
          int[] exp = SortOptimizedArray(array);
-         foreach (int z in exp)
+         foreach (int k in exp)
          {
-            Console.Write(z + " ");
+            Console.Write(k + " ");
          }
          Console.WriteLine();
 
