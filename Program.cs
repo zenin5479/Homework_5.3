@@ -91,10 +91,11 @@ namespace Homework_5._3
                   x++;
                   swapRequired = true;
                }
-               if (swapRequired == false)
-               {
-                  break;
-               }
+            }
+
+            if (swapRequired == false)
+            {
+               break;
             }
          }
 
