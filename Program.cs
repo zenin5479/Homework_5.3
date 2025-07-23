@@ -23,6 +23,7 @@ namespace Homework_5._3
          {
             Console.Write(i + " ");
          }
+
          Console.WriteLine();
 
          int[] arrayTwo = SortArray(expected);
@@ -30,6 +31,7 @@ namespace Homework_5._3
          {
             Console.Write(j + " ");
          }
+
          Console.WriteLine();
 
          int[] arrayThree = SortOptimizedArray(array);
@@ -37,6 +39,7 @@ namespace Homework_5._3
          {
             Console.Write(k + " ");
          }
+
          Console.WriteLine();
 
          int[] arrayFour = SortOptimizedArray(expected);
@@ -44,6 +47,7 @@ namespace Homework_5._3
          {
             Console.Write(l + " ");
          }
+
          Console.WriteLine();
       }
 
