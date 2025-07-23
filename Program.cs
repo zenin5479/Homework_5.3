@@ -49,6 +49,8 @@ namespace Homework_5._3
 
       public static int[] SortArray(int[] numArray)
       {
+         int x = 0;
+
          int n = numArray.Length;
          for (int i = 0; i < n - 1; i++)
          {
@@ -62,12 +64,14 @@ namespace Homework_5._3
                }
             }
          }
+         Console.WriteLine(x);
 
          return numArray;
       }
 
       public static int[] SortOptimizedArray(int[] numArray)
       {
+         int x = 0;
          int n = numArray.Length;
          bool swapRequired;
          for (int i = 0; i < n - 1; i++)
@@ -81,12 +85,15 @@ namespace Homework_5._3
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
                   swapRequired = true;
+                  x++;
                }
             }
 
             if (swapRequired == false)
                break;
          }
+
+         Console.WriteLine(x);
 
          return numArray;
       }
