@@ -18,15 +18,15 @@ namespace Homework_5._3
          int[] array = { 73, 57, 49, 99, 133, 20, 1 };
          int[] expected = { 1, 20, 49, 57, 73, 99, 133 };
 
-         int[] expe = SortArray(array);
-         foreach (int i in expe)
+         int[] arrayOne = SortArray(array);
+         foreach (int i in arrayOne)
          {
             Console.Write(i + " ");
          }
          Console.WriteLine();
 
-         int[] expe2 = SortArray(expected);
-         foreach (int j in expe)
+         int[] arrayTwo = SortArray(expected);
+         foreach (int j in arrayTwo)
          {
             Console.Write(j + " ");
          }
