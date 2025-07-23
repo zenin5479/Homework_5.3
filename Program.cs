@@ -93,11 +93,9 @@ namespace Homework_5._3
                }
                if (swapRequired == false)
                {
-                  x++;
                   break;
                }
             }
-
          }
 
          Console.WriteLine(x);
