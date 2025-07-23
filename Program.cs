@@ -57,7 +57,7 @@ namespace Homework_5._3
          int n = numArray.Length;
          for (int i = 0; i < n - 1; i++)
          {
-            for (int j = 0; j < n - i - 1; j++)
+            for (int j = 0; j < n - 1 - i; j++)
             {
                if (numArray[j] > numArray[j + 1])
                {
@@ -81,7 +81,7 @@ namespace Homework_5._3
          for (int i = 0; i < n - 1; i++)
          {
             swapRequired = false;
-            for (int j = 0; j < n - i - 1; j++)
+            for (int j = 0; j < n - 1 - i; j++)
             {
                if (numArray[j] > numArray[j + 1])
                {
@@ -89,7 +89,6 @@ namespace Homework_5._3
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
                   swapRequired = true;
-
                }
 
                x++;
