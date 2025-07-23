@@ -18,21 +18,21 @@ namespace Homework_5._3
          int[] array = { 73, 57, 49, 99, 12, -20, 1 };
          int[] expected = { 21, 2, 59, -50, 97, 71, 69, 5 };
 
-         int[] arrayOne = SortArray(array);
-         foreach (int i in arrayOne)
-         {
-            Console.Write(i + " ");
-         }
+         //int[] arrayOne = SortArray(array);
+         //foreach (int i in arrayOne)
+         //{
+         //   Console.Write(i + " ");
+         //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
 
-         int[] arrayTwo = SortArray(expected);
-         foreach (int j in arrayTwo)
-         {
-            Console.Write(j + " ");
-         }
+         //int[] arrayTwo = SortArray(expected);
+         //foreach (int j in arrayTwo)
+         //{
+         //   Console.Write(j + " ");
+         //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
 
          int[] arrayThree = SortOptimizedArray(array);
          foreach (int k in arrayThree)
