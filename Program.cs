@@ -32,15 +32,15 @@ namespace Homework_5._3
          }
          Console.WriteLine();
 
-         int[] exp = SortOptimizedArray(array);
-         foreach (int k in exp)
+         int[] arrayThree = SortOptimizedArray(array);
+         foreach (int k in arrayThree)
          {
             Console.Write(k + " ");
          }
          Console.WriteLine();
 
-         int[] exp2 = SortOptimizedArray(expected);
-         foreach (int l in exp2)
+         int[] arrayFour = SortOptimizedArray(expected);
+         foreach (int l in arrayFour)
          {
             Console.Write(l + " ");
          }
