@@ -50,7 +50,6 @@ namespace Homework_5._3
       public static int[] SortArray(int[] numArray)
       {
          int x = 0;
-
          int n = numArray.Length;
          for (int i = 0; i < n - 1; i++)
          {
@@ -61,11 +60,12 @@ namespace Homework_5._3
                   int tempVar = numArray[j];
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
+                  x++;
                }
             }
          }
-         Console.WriteLine(x);
 
+         Console.WriteLine(x);
          return numArray;
       }
 
@@ -94,7 +94,6 @@ namespace Homework_5._3
          }
 
          Console.WriteLine(x);
-
          return numArray;
       }
    }
