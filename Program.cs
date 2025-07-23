@@ -15,8 +15,8 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
-         int[] array = { 73, 57, 49, 99, 12, -20, 1 };
-         int[] expected = { 2, 21, -50, 59, 71, 97, 69 };
+         int[] array = { 73, 57, 49, 99, 12, -20, 1, 8 };
+         int[] expected = { 2, 21, -50, 59, 71, 97, 69, 5 };
 
          int[] arrayOne = SortArray(array);
          foreach (int i in arrayOne)
@@ -85,12 +85,16 @@ namespace Homework_5._3
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
                   swapRequired = true;
-                  x++;
+
                }
+
+               x++;
             }
 
             if (swapRequired == false)
+            {
                break;
+            }
          }
 
          Console.WriteLine(x);
