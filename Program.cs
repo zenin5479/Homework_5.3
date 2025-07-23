@@ -88,15 +88,15 @@ namespace Homework_5._3
                   int tempVar = numArray[j];
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
-                  //x++;
-                  swapRequired = true;
-
-               }
-               if (swapRequired == false)
-               {
                   x++;
-                  break;
+                  swapRequired = true;
                }
+
+            }
+            if (swapRequired == false)
+            {
+               x++;
+               break;
             }
          }
 
