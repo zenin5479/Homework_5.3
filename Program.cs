@@ -91,13 +91,13 @@ namespace Homework_5._3
                   x++;
                   swapRequired = true;
                }
+               if (swapRequired == false)
+               {
+                  x++;
+                  break;
+               }
+            }
 
-            }
-            if (swapRequired == false)
-            {
-               x++;
-               break;
-            }
          }
 
          Console.WriteLine(x);
