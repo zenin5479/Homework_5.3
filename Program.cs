@@ -19,9 +19,9 @@ namespace Homework_5._3
          int[] expected = { 1, 20, 49, 57, 73, 99, 133 };
 
          int[] expe = SortArray(array);
-         foreach (int s in expe)
+         foreach (int i in expe)
          {
-            Console.Write(s + " ");
+            Console.Write(i + " ");
          }
          Console.WriteLine();
 
