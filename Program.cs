@@ -15,8 +15,8 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
-         int[] array = { 73, 57, 49, 99, 12, -20, 1 };
-         int[] expected = { 21, 2, 59, -50, 97, 71, 69, 5 };
+         int[] array = { -93, -84, 84, 95, 93, 71, -36, -8, 37, -11, -3, -73, -31, -27, -14, -55, 1, 45, 81, 47 };
+         int[] expected = { 55, -23, 35, -56, 90, 59, 72, -53, 63, 68, -71, 87, -9, -63, 24, -88, 24, 80, 41, 30 };
 
          //int[] arrayOne = SortArray(array);
          //foreach (int i in arrayOne)
