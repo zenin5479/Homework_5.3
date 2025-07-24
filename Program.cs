@@ -26,13 +26,13 @@ namespace Homework_5._3
 
          //Console.WriteLine();
 
-         int[] arrayTwo = SortArray(expected);
-         foreach (int j in arrayTwo)
-         {
-            Console.Write(j + " ");
-         }
+         //int[] arrayTwo = SortArray(expected);
+         //foreach (int j in arrayTwo)
+         //{
+         //   Console.Write(j + " ");
+         //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
 
          //int[] arrayThree = SortOptimizedArray(array);
          //foreach (int k in arrayThree)
@@ -42,13 +42,13 @@ namespace Homework_5._3
 
          //Console.WriteLine();
 
-         //int[] arrayFour = SortOptimizedArray(expected);
-         //foreach (int l in arrayFour)
-         //{
-         //   Console.Write(l + " ");
-         //}
+         int[] arrayFour = SortOptimizedArray(expected);
+         foreach (int l in arrayFour)
+         {
+            Console.Write(l + " ");
+         }
 
-         //Console.WriteLine();
+         Console.WriteLine();
       }
 
       public static int[] SortArray(int[] numArray)
