@@ -55,8 +55,15 @@ namespace Homework_5._3
       {
          int x = 0;
          int n = numArray.Length;
-         for (int i = 0; i < n - 1; i++)
+
+         int i = 0;
+         while (i < n - 1)
          {
+            while (expression)
+            {
+               
+            }
+            
             for (int j = 0; j < n - 1 - i; j++)
             {
                if (numArray[j] > numArray[j + 1])
@@ -68,6 +75,17 @@ namespace Homework_5._3
 
                x++;
             }
+            
+            
+            
+            
+            i++;
+         }
+
+
+         for ()
+         {
+            
          }
 
          Console.WriteLine(x);
