@@ -55,7 +55,6 @@ namespace Homework_5._3
       {
          int x = 0;
          int n = numArray.Length;
-
          int i = 0;
          while (i < n - 1)
          {
