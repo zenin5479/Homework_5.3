@@ -18,21 +18,21 @@ namespace Homework_5._3
          int[] array = { 73, 57, 49, 99, 12, -20, 1 };
          int[] expected = { 21, 2, 59, -50, 97, 71, 69, 5 };
 
-         //int[] arrayOne = SortArray(array);
-         //foreach (int i in arrayOne)
-         //{
-         //   Console.Write(i + " ");
-         //}
+         int[] arrayOne = SortArray(array);
+         foreach (int i in arrayOne)
+         {
+            Console.Write(i + " ");
+         }
 
-         //Console.WriteLine();
+         Console.WriteLine();
 
-         //int[] arrayTwo = SortArray(expected);
-         //foreach (int j in arrayTwo)
-         //{
-         //   Console.Write(j + " ");
-         //}
+         int[] arrayTwo = SortArray(expected);
+         foreach (int j in arrayTwo)
+         {
+            Console.Write(j + " ");
+         }
 
-         //Console.WriteLine();
+         Console.WriteLine();
 
          //int[] arrayThree = SortOptimizedArray(array);
          //foreach (int k in arrayThree)
@@ -42,13 +42,13 @@ namespace Homework_5._3
 
          //Console.WriteLine();
 
-         int[] arrayFour = SortOptimizedArray(expected);
-         foreach (int l in arrayFour)
-         {
-            Console.Write(l + " ");
-         }
+         //int[] arrayFour = SortOptimizedArray(expected);
+         //foreach (int l in arrayFour)
+         //{
+         //   Console.Write(l + " ");
+         //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
       }
 
       public static int[] SortArray(int[] numArray)
@@ -59,12 +59,8 @@ namespace Homework_5._3
          int i = 0;
          while (i < n - 1)
          {
-            while (expression)
-            {
-               
-            }
-            
-            for (int j = 0; j < n - 1 - i; j++)
+            int j = 0;
+            while (j < n - 1 - i)
             {
                if (numArray[j] > numArray[j + 1])
                {
@@ -74,18 +70,10 @@ namespace Homework_5._3
                }
 
                x++;
+               j++;
             }
-            
-            
-            
-            
+
             i++;
-         }
-
-
-         for ()
-         {
-            
          }
 
          Console.WriteLine(x);
