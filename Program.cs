@@ -84,13 +84,12 @@ namespace Homework_5._3
          int x = 0;
          int y = 0;
          int n = numArray.Length;
-         bool swapRequired;
-
          int i = 0;
          while (i < n - 1)
          {
-            swapRequired = false;
-            for (int j = 0; j < n - 1 - i; j++)
+            bool swapRequired = false;
+            int j = 0;
+            while (j < n - 1 - i)
             {
                if (numArray[j] > numArray[j + 1])
                {
@@ -101,6 +100,7 @@ namespace Homework_5._3
                }
 
                x++;
+               j++;
             }
 
             if (swapRequired == false)
@@ -108,10 +108,6 @@ namespace Homework_5._3
                y++;
                break;
             }
-
-
-
-
 
             i++;
          }
