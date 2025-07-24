@@ -26,29 +26,29 @@ namespace Homework_5._3
 
          //Console.WriteLine();
 
-         //int[] arrayTwo = SortArray(expected);
-         //foreach (int j in arrayTwo)
+         int[] arrayTwo = SortArray(expected);
+         foreach (int j in arrayTwo)
+         {
+            Console.Write(j + " ");
+         }
+
+         Console.WriteLine();
+
+         //int[] arrayThree = SortOptimizedArray(array);
+         //foreach (int k in arrayThree)
          //{
-         //   Console.Write(j + " ");
+         //   Console.Write(k + " ");
          //}
 
          //Console.WriteLine();
 
-         int[] arrayThree = SortOptimizedArray(array);
-         foreach (int k in arrayThree)
-         {
-            Console.Write(k + " ");
-         }
+         //int[] arrayFour = SortOptimizedArray(expected);
+         //foreach (int l in arrayFour)
+         //{
+         //   Console.Write(l + " ");
+         //}
 
-         Console.WriteLine();
-
-         int[] arrayFour = SortOptimizedArray(expected);
-         foreach (int l in arrayFour)
-         {
-            Console.Write(l + " ");
-         }
-
-         Console.WriteLine();
+         //Console.WriteLine();
       }
 
       public static int[] SortArray(int[] numArray)
@@ -64,8 +64,10 @@ namespace Homework_5._3
                   int tempVar = numArray[j];
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
-                  x++;
+
                }
+
+               x++;
             }
          }
 
@@ -88,9 +90,12 @@ namespace Homework_5._3
                   int tempVar = numArray[j];
                   numArray[j] = numArray[j + 1];
                   numArray[j + 1] = tempVar;
-                  x++;
+
                   swapRequired = true;
+
                }
+               x++;
+
             }
 
             if (swapRequired == false)
