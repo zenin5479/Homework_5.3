@@ -30,7 +30,6 @@ namespace Homework_5._3
          };
 
          SwitchRows(num);
-
          Console.ReadKey();
       }
 
@@ -38,7 +37,6 @@ namespace Homework_5._3
       {
          int iMax = array.GetLength(0);
          int jMax = array.GetLength(1);
-
          for (int i = 0; i < iMax; i = i + 2)
          {
             for (int j = 0; j < jMax; j++)
