@@ -18,37 +18,37 @@ namespace Homework_5._3
          int[] array = { -93, -84, 84, 95, 93, 71, -36, -8, 37, -11, -3, -73, -31, -27, -14, -55, 1, 45, 81, 47 };
          int[] expected = { 55, -23, 35, -56, 90, 59, 72, -53, 63, 68, -71, 87, -9, -63, 24, -88, 24, 80, 41, 30 };
 
-         //int[] arrayOne = SortArray(array);
-         //foreach (int i in arrayOne)
-         //{
-         //   Console.Write(i + " ");
-         //}
-
-         //Console.WriteLine();
-
-         //int[] arrayTwo = SortArray(expected);
-         //foreach (int j in arrayTwo)
-         //{
-         //   Console.Write(j + " ");
-         //}
-
-         //Console.WriteLine();
-
-         int[] arrayThree = SortOptimizedArray(array);
-         foreach (int k in arrayThree)
+         int[] arrayOne = SortArray(array);
+         foreach (int i in arrayOne)
          {
-            Console.Write(k + " ");
+            Console.Write(i + " ");
          }
 
          Console.WriteLine();
 
-         int[] arrayFour = SortOptimizedArray(expected);
-         foreach (int l in arrayFour)
+         int[] arrayTwo = SortArray(expected);
+         foreach (int j in arrayTwo)
          {
-            Console.Write(l + " ");
+            Console.Write(j + " ");
          }
 
          Console.WriteLine();
+
+         //int[] arrayThree = SortOptimizedArray(array);
+         //foreach (int k in arrayThree)
+         //{
+         //   Console.Write(k + " ");
+         //}
+
+         //Console.WriteLine();
+
+         //int[] arrayFour = SortOptimizedArray(expected);
+         //foreach (int l in arrayFour)
+         //{
+         //   Console.Write(l + " ");
+         //}
+
+         //Console.WriteLine();
       }
 
       public static int[] SortArray(int[] numArray)
