@@ -103,7 +103,7 @@ namespace Homework_5._3
             }
          }
 
-         Console.WriteLine(x + "" + y);
+         Console.WriteLine(x + ", " + y);
          return numArray;
       }
    }
