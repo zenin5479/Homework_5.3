@@ -18,37 +18,37 @@ namespace Homework_5._3
          int[] array = { 73, 57, 49, 99, 12, -20, 1 };
          int[] expected = { 21, 2, 59, -50, 97, 71, 69, 5 };
 
-         int[] arrayOne = SortArray(array);
-         foreach (int i in arrayOne)
-         {
-            Console.Write(i + " ");
-         }
-
-         Console.WriteLine();
-
-         int[] arrayTwo = SortArray(expected);
-         foreach (int j in arrayTwo)
-         {
-            Console.Write(j + " ");
-         }
-
-         Console.WriteLine();
-
-         //int[] arrayThree = SortOptimizedArray(array);
-         //foreach (int k in arrayThree)
+         //int[] arrayOne = SortArray(array);
+         //foreach (int i in arrayOne)
          //{
-         //   Console.Write(k + " ");
+         //   Console.Write(i + " ");
          //}
 
          //Console.WriteLine();
 
-         //int[] arrayFour = SortOptimizedArray(expected);
-         //foreach (int l in arrayFour)
+         //int[] arrayTwo = SortArray(expected);
+         //foreach (int j in arrayTwo)
          //{
-         //   Console.Write(l + " ");
+         //   Console.Write(j + " ");
          //}
 
          //Console.WriteLine();
+
+         int[] arrayThree = SortOptimizedArray(array);
+         foreach (int k in arrayThree)
+         {
+            Console.Write(k + " ");
+         }
+
+         Console.WriteLine();
+
+         int[] arrayFour = SortOptimizedArray(expected);
+         foreach (int l in arrayFour)
+         {
+            Console.Write(l + " ");
+         }
+
+         Console.WriteLine();
       }
 
       public static int[] SortArray(int[] numArray)
@@ -85,7 +85,9 @@ namespace Homework_5._3
          int y = 0;
          int n = numArray.Length;
          bool swapRequired;
-         for (int i = 0; i < n - 1; i++)
+
+         int i = 0;
+         while (i < n - 1)
          {
             swapRequired = false;
             for (int j = 0; j < n - 1 - i; j++)
@@ -106,6 +108,12 @@ namespace Homework_5._3
                y++;
                break;
             }
+
+
+
+
+
+            i++;
          }
 
          Console.WriteLine(x + ", " + y);
