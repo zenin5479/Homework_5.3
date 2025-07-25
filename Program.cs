@@ -29,7 +29,7 @@ namespace Homework_5._3
             {86, -3, 86, -13, -83, -48, -72, -23, 33, 42}
          };
 
-         SwitchRows(num);
+         //SwitchRows(num);
          ChangeArray(num);
          Console.ReadKey();
       }
@@ -72,7 +72,10 @@ namespace Homework_5._3
                   array[(array.GetLength(1) - 1), j] = temporary;
                   Console.Write(temporary + ", ");
                }
+
+
             }
+            Console.WriteLine();
          }
       }
 
