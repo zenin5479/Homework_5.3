@@ -42,22 +42,25 @@ namespace Homework_5._3
 
       static void Puzurek(double[,] num, double[] sum)
       {
-         for (int i = 0; i < num.GetLength(0); i++)
+         for (int i = 0; i < num.GetLength(0) - 1; i++)
          {
-            for (int j = 0; j < num.GetLength(1); j++)
+            if (sum[i] < sum[i + 1])
             {
-               if (sum[i] > sum[i + 1])// проверил условие
-               {
-                  double buf = num[i, j];// создал переменную куда закинул строку, не подходящую под условие
-                  num[i, j] = num[i + 1, j];// поменял местами строки
-                  num[i, j + 1] = buf;
-                  Console.Write(buf + " ");
+               double temp = sum[i];
+               sum[i] = sum[i + 1];
+               sum[i + 1] = temp;
 
-                  double temp = sum[i];// создал переменную для суммы
-                  sum[i] = sum[i + 1]; //поменял местами суммы
-                  sum[i + 1] = temp;
-               }
+               //for (int j = 0; j < num.GetLength(1); j++)
+               //{
+               //   double buf = num[i, j];
+               //   num[i, j] = num[i + 1, j];
+               //   num[i + 1, j] = buf;
+               //   Console.Write(buf + " ");
+               //}
+
+               Console.WriteLine(temp);
             }
+
          }
       }
 
