@@ -29,18 +29,18 @@ namespace Homework_5._3
             {-11.51, -52.13, 77.07, -90.72, 71.63, 34.85, -26.97, -16.22, -23.27, 46.35}
          };
 
-         double[] hu = sum(num);
+         double[] hu = Sum(num);
          foreach (int rus in hu)
          {
             Console.Write(rus + " ");
          }
 
          Console.WriteLine();
-         puzurek(num, hu);
+         Puzurek(num, hu);
          Console.ReadKey();
       }
 
-      static void puzurek(double[,] x, double[] y)
+      static void Puzurek(double[,] x, double[] y)
       {
          for (int i = 0; i < x.GetLength(0); i++)
          {
@@ -61,7 +61,7 @@ namespace Homework_5._3
          }
       }
 
-      private static double[] sum(double[,] x)
+      private static double[] Sum(double[,] x)
       {
          double[] y = new double[x.GetLength(0)];
          for (int i = 0; i < x.GetLength(0); i++)
