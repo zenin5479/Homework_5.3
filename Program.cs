@@ -29,26 +29,30 @@ namespace Homework_5._3
             {-11.51, -52.13, 77.07, -90.72, 71.63, 34.85, -26.97, -16.22, -23.27, 46.35}
          };
 
-
          double[] hu = sum(num);
-         puzurek(num, hu);
+         foreach (int rus in hu)
+         {
+            Console.Write(rus + " ");
+         }
+         //puzurek(num, hu);
          Console.ReadKey();
       }
 
       static void puzurek(double[,] x, double[] y)
       {
-         for (int i = 0; i < x.GetLength(0) - 1; i++)
+         for (int i = 0; i < x.GetLength(0); i++)
          {
-            for (int j = 0; j < x.GetLength(1) - i - 1; j++)
+            if (y[i] > y[i + 1])// проверил условие
             {
-               if (y[i] > y[i + 1])// проверила условие
+               for (int j = 0; j < x.GetLength(1); j++)
                {
-                  double buf = x[i, i];// создала переменную куда закинула строку, не подходящую под условие
-                  x[i, j] = x[i,j + 1];// поменяла местами строки
+                  double buf = x[i, i];// создал переменную куда закинул строку, не подходящую под условие
+                  x[i, j] = x[i + 1, j];// поменял местами строки
                   x[i, j + 1] = buf;
+                  Console.WriteLine(buf);
 
-                  double temp = y[i];// создала переменную для суммы
-                  y[i] = y[i + 1]; //поменяла местами суммы
+                  double temp = y[i];// создал переменную для суммы
+                  y[i] = y[i + 1]; //поменял местами суммы
                   y[i + 1] = temp;
                }
             }
