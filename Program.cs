@@ -32,15 +32,17 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      public void sum(double[,] x, int n, int m, double[] y)
+      public void sum(double[,] x, out double[] y)
       {
-         for (int i = 0; i < n; i++)
+         y = new double[]{x.GetLength(1) };
+         for (int i = 0; i < x.GetLength(0); i++)
          {
             double sum = 0;
-            for (int j = 0; j < m; j++)
+            for (int j = 0; j < x.GetLength(1); j++)
             {
                sum += x[i,j];
             }
+            
             y[i] = sum;
          }
       }
