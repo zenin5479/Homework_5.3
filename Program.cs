@@ -30,13 +30,13 @@ namespace Homework_5._3
          };
 
 
-
+         double[] hu = sum(num);
          Console.ReadKey();
       }
 
-      public void sum(double[,] x, out double[] y)
+      private static double[] sum(double[,] x)
       {
-         y = new double[] { x.GetLength(1) };
+         double[] y = { x.GetLength(0) };
          for (int i = 0; i < x.GetLength(0); i++)
          {
             double sum = 0;
@@ -47,6 +47,8 @@ namespace Homework_5._3
 
             y[i] = sum;
          }
+
+         return y;
       }
 
       private static void SwitchRows(int[,] array)
