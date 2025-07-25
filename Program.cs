@@ -45,7 +45,6 @@ namespace Homework_5._3
          }
       }
 
-
       private static void SwitchRows(int[,] array)
       {
 
