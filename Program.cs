@@ -34,7 +34,7 @@ namespace Homework_5._3
          {
             Console.Write(rus + " ");
          }
-         //puzurek(num, hu);
+         puzurek(num, hu);
          Console.ReadKey();
       }
 
