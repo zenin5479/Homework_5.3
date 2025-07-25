@@ -15,7 +15,7 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
-         double[,] num =
+         double[,] number =
          {
             {-87.39, -12.38, -88.93, -6.05, 73.40, -35.01, -56.16, 42.12, -99.55, 53.52 },
             {-48.09, 59.51, -91.36, -71.55, 47.46, -0.57, -5.72, -73.92, 8.37, 18.60 },
@@ -29,47 +29,47 @@ namespace Homework_5._3
             {-11.51, -52.13, 77.07, -90.72, 71.63, 34.85, -26.97, -16.22, -23.27, 46.35}
          };
 
-         double[] hu = Sum(num);
-         foreach (int rus in hu)
+         double[] summa = Sum(number);
+         foreach (int rus in summa)
          {
             Console.Write(rus + " ");
          }
 
          Console.WriteLine();
-         Puzurek(num, hu);
+         Puzurek(number, summa);
          Console.ReadKey();
       }
 
-      static void Puzurek(double[,] x, double[] y)
+      static void Puzurek(double[,] num, double[] sum)
       {
-         for (int i = 0; i < x.GetLength(0); i++)
+         for (int i = 0; i < num.GetLength(0); i++)
          {
-            for (int j = 0; j < x.GetLength(1); j++)
+            for (int j = 0; j < num.GetLength(1); j++)
             {
-               if (y[i] > y[i + 1])// проверил условие
+               if (sum[i] > sum[i + 1])// проверил условие
                {
-                  double buf = x[i, j];// создал переменную куда закинул строку, не подходящую под условие
-                  x[i, j] = x[i + 1, j];// поменял местами строки
-                  x[i, j + 1] = buf;
+                  double buf = num[i, j];// создал переменную куда закинул строку, не подходящую под условие
+                  num[i, j] = num[i + 1, j];// поменял местами строки
+                  num[i, j + 1] = buf;
                   Console.Write(buf + " ");
 
-                  double temp = y[i];// создал переменную для суммы
-                  y[i] = y[i + 1]; //поменял местами суммы
-                  y[i + 1] = temp;
+                  double temp = sum[i];// создал переменную для суммы
+                  sum[i] = sum[i + 1]; //поменял местами суммы
+                  sum[i + 1] = temp;
                }
             }
          }
       }
 
-      private static double[] Sum(double[,] x)
+      private static double[] Sum(double[,] arr)
       {
-         double[] y = new double[x.GetLength(0)];
-         for (int i = 0; i < x.GetLength(0); i++)
+         double[] y = new double[arr.GetLength(0)];
+         for (int i = 0; i < arr.GetLength(0); i++)
          {
             double sum = 0;
-            for (int j = 0; j < x.GetLength(1); j++)
+            for (int j = 0; j < arr.GetLength(1); j++)
             {
-               sum += x[i, j];
+               sum += arr[i, j];
             }
 
             y[i] = sum;
