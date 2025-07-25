@@ -29,29 +29,11 @@ namespace Homework_5._3
             {86, -3, 86, -13, -83, -48, -72, -23, 33, 42}
          };
 
-         ChangeArray(num);
+         SwitchRows(num);
          Console.ReadKey();
       }
 
       private static void SwitchRows(int[,] array)
-      {
-         int iMax = array.GetLength(0);
-         int jMax = array.GetLength(1);
-         for (int i = 0; i < iMax; i = i + 2)
-         {
-            for (int j = 0; j < jMax; j++)
-            {
-               int a = array[i, j];
-               array[i, j] = array[i + 1, j];
-               array[i + 1, j] = a;
-               Console.Write(a + ", ");
-            }
-
-            Console.WriteLine();
-         }
-      }
-
-      static void ChangeArray(int[,] array)
       {
          for (int i = 0; i < array.GetLength(0); i++)
          {
