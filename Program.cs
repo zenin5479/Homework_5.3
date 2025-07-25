@@ -31,7 +31,28 @@ namespace Homework_5._3
 
 
          double[] hu = sum(num);
+         puzurek(num, hu);
          Console.ReadKey();
+      }
+
+      static void puzurek(double[,] x, double[] y)
+      {
+         for (int i = 0; i < x.GetLength(0) - 1; i++)
+         {
+            for (int j = 0; j < x.GetLength(1) - i - 1; j++)
+            {
+               if (y[j] > y[j + 1])// проверила условие
+               {
+                  double buf = x[i, j];// создала переменную куда закинула строку, не подходящую под условие
+                  x[i, j] = x[i,j + 1];// поменяла местами строки
+                  x[i, j + 1] = buf;
+
+                  double temp = y[i];// создала переменную для суммы
+                  y[i] = y[i + 1]; //поменяла местами суммы
+                  y[i + 1] = temp;
+               }
+            }
+         }
       }
 
       private static double[] sum(double[,] x)
