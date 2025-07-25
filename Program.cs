@@ -34,6 +34,8 @@ namespace Homework_5._3
          {
             Console.Write(rus + " ");
          }
+
+         Console.WriteLine();
          puzurek(num, hu);
          Console.ReadKey();
       }
@@ -49,7 +51,7 @@ namespace Homework_5._3
                   double buf = x[i, i];// создал переменную куда закинул строку, не подходящую под условие
                   x[i, j] = x[i + 1, j];// поменял местами строки
                   x[i, j + 1] = buf;
-                  Console.WriteLine(buf);
+                  Console.Write(buf + " ");
 
                   double temp = y[i];// создал переменную для суммы
                   y[i] = y[i + 1]; //поменял местами суммы
