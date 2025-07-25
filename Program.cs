@@ -44,11 +44,11 @@ namespace Homework_5._3
       {
          for (int i = 0; i < x.GetLength(0); i++)
          {
-            if (y[i] > y[i + 1])// проверил условие
+            for (int j = 0; j < x.GetLength(1); j++)
             {
-               for (int j = 0; j < x.GetLength(1); j++)
+               if (y[i] > y[i + 1])// проверил условие
                {
-                  double buf = x[i, i];// создал переменную куда закинул строку, не подходящую под условие
+                  double buf = x[i, j];// создал переменную куда закинул строку, не подходящую под условие
                   x[i, j] = x[i + 1, j];// поменял местами строки
                   x[i, j + 1] = buf;
                   Console.Write(buf + " ");
