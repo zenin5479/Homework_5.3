@@ -58,7 +58,7 @@ namespace Homework_5._3
                //   Console.Write(buf + " ");
                //}
 
-               Console.WriteLine(temp);
+               Console.WriteLine(sum[i]);
             }
 
          }
