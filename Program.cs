@@ -30,6 +30,7 @@ namespace Homework_5._3
          };
 
          SwitchRows(num);
+         ChangeArray(num);
          Console.ReadKey();
       }
 
@@ -51,7 +52,7 @@ namespace Homework_5._3
          }
       }
 
-      void ChangeArray(int[,] array)
+      static void ChangeArray(int[,] array)
       {
          for (int i = 0; i < array.GetLength(0); i++)
          {
