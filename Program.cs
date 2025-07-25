@@ -36,7 +36,7 @@ namespace Homework_5._3
 
       private static double[] sum(double[,] x)
       {
-         double[] y = { x.GetLength(0) };
+         double[] y = new double[x.GetLength(0)];
          for (int i = 0; i < x.GetLength(0); i++)
          {
             double sum = 0;
