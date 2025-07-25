@@ -29,33 +29,26 @@ namespace Homework_5._3
             {86, -3, 86, -13, -83, -48, -72, -23, 33, 42}
          };
 
-         SwitchRows(num);
          Console.ReadKey();
       }
 
+      public void sum(double[,] x, int n, int m, double[] y)
+      {
+         for (int i = 0; i < n; i++)
+         {
+            double sum = 0;
+            for (int j = 0; j < m; j++)
+            {
+               sum += x[i,j];
+            }
+            y[i] = sum;
+         }
+      }
+
+
       private static void SwitchRows(int[,] array)
       {
-         for (int i = 0; i < array.GetLength(0); i++)
-         {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-               if (i > 0 && i < array.GetLength(1))
-               {
-                  int temporary = array[i, j];
-                  array[i, j] = array[i, j];
-                  array[i, j] = temporary;
-                  Console.Write(temporary + ", ");
-               }
-               else
-               {
-                  int temporary = array[i, j];
-                  array[i, j] = array[(array.GetLength(1) - 1), j];
-                  array[(array.GetLength(1) - 1), j] = temporary;
-                  Console.Write(temporary + ", ");
-               }
-            }
-            Console.WriteLine();
-         }
+
       }
 
       public static int[] SortArray(int[] numArray)
