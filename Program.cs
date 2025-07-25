@@ -63,12 +63,14 @@ namespace Homework_5._3
                   int temporary = array[i, j];
                   array[i, j] = array[i, j];
                   array[i, j] = temporary;
+                  Console.Write(temporary + ", ");
                }
                else
                {
                   int temporary = array[i, j];
                   array[i, j] = array[(array.GetLength(1) - 1), j];
                   array[(array.GetLength(1) - 1), j] = temporary;
+                  Console.Write(temporary + ", ");
                }
             }
          }
