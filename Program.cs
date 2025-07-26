@@ -56,7 +56,7 @@ namespace Homework_5._3
          while (x < num.GetLength(0))
          {
             int z = 0;
-            while (z < num.GetLength(0))
+            while (z < num.GetLength(1))
             {
                Console.Write(num[x, z] + " ");
                //Console.Write("{0:f2} ", num[x, z]);
@@ -64,9 +64,8 @@ namespace Homework_5._3
                z++;
             }
 
-            Console.WriteLine();
-
             x++;
+            Console.WriteLine();
          }
       }
 
