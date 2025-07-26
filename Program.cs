@@ -18,9 +18,9 @@ namespace Homework_5._3
          double[,] number =
          {
             {-87.39, -12.38, -88.93, -6.05, 73.40 },
-            {-48.09, 59.51, -91.36, -71.55, 47.46},
-            {-86.13, -18.24, 55.57, -77.51, -5.61},
-            {-75.65, -26.89, -47.29, -3.93, -12.94},
+            {-48.09, 59.51, 81.36, -71.55, 47.46},
+            {86.13, -18.24, 75.57, 77.51, -5.61},
+            {25.65, 26.89, 27.29, -3.93, -12.94},
          };
 
          double[] summa = Sum(number);
@@ -54,35 +54,39 @@ namespace Homework_5._3
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < num.GetLength(0); i++)
          {
-            for (int k = i + 1; k < num.GetLength(0); k++)
+            for (int j = 0; j < num.GetLength(1); j++)
             {
-               if (sum[i] < sum[i + 1])
+               for (int k = i + 1; k < num.GetLength(0); k++)
                {
-                  for (int j = 0; j < num.GetLength(1); j++)
+                  if (sum[i] > sum[i + 1])
                   {
                      double tmp = num[i, j];
                      num[i, j] = num[k, j];
                      num[k, j] = tmp;
                   }
+
+                  Console.Write(num[i, j] + " ");
                }
+
+               Console.WriteLine();
             }
          }
 
-         int x = 0;
-         while (x < num.GetLength(0))
-         {
-            int z = 0;
-            while (z < num.GetLength(1))
-            {
-               Console.Write(num[x, z] + " ");
-               //Console.Write("{0:f2} ", num[x, z]);
-               //Console.Write("{0:f} ", num[x, z]);
-               z++;
-            }
+         //int x = 0;
+         //while (x < num.GetLength(0))
+         //{
+         //   int z = 0;
+         //   while (z < num.GetLength(1))
+         //   {
+         //      Console.Write(num[x, z] + " ");
+         //      //Console.Write("{0:f2} ", num[x, z]);
+         //      //Console.Write("{0:f} ", num[x, z]);
+         //      z++;
+         //   }
 
-            x++;
-            Console.WriteLine();
-         }
+         //   x++;
+         //   Console.WriteLine();
+         //}
       }
 
       static void Puzurek(double[] sum)
