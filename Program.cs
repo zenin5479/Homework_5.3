@@ -30,12 +30,47 @@ namespace Homework_5._3
          EnterArrayDouble(summa);
          Console.WriteLine();
          //EnterArrayDouble(number);
-         Puzurek(number, summa);
-
+         Puzurek(summa);
+         Puzurek(number);
          Console.ReadKey();
       }
 
-      static void Puzurek(double[,] num, double[] sum)
+      static void Puzurek(double[,] num)
+      {
+         Console.WriteLine("Двумерный числовой массив");
+         for (int i = 0; i < num.GetLength(0); i++)
+         {
+            for (int j = 0; j < num.GetLength(1); j++)
+            {
+               for (int k = i + 1; k < num.Length; k++)
+               {
+                  if (num[i, j] < num[k, j])
+                  {
+                     double tmp = num[i, j];
+                     num[i, j] = num[k, j];
+                     num[k, j] = tmp;
+                  }
+               }
+            }
+         }
+
+         int x = 0;
+         while (x < num.GetLength(0))
+         {
+            int z = 0;
+            while (z < num.GetLength(0))
+            {
+               Console.Write(num[x, z] + " ");
+               Console.Write("{0:f2} ", num[x, z]);
+               Console.Write("{0:f} ", num[x, z]);
+               z++;
+            }
+
+            x++;
+         }
+      }
+
+      static void Puzurek(double[] sum)
       {
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < sum.Length; i++)
