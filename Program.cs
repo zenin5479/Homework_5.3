@@ -27,13 +27,13 @@ namespace Homework_5._3
          EnterArrayDouble(summa);
          Console.WriteLine();
          EnterArrayDouble(number);
-         Puzurek(summa);
+         BubbleSort(summa);
          Console.WriteLine();
-         Puzurek(number, summa);
+         BubbleSort(number, summa);
          Console.ReadKey();
       }
 
-      static void Puzurek(double[,] num, double[] sum)
+      static void BubbleSort(double[,] num, double[] sum)
       {
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < num.GetLength(0); i++)
@@ -69,12 +69,14 @@ namespace Homework_5._3
          }
       }
 
-      static void Puzurek(double[] sum)
+      static void BubbleSort(double[] sum)
       {
          Console.WriteLine("Одномерный числовой массив");
-         for (int i = 0; i < sum.Length; i++)
+         int i = 0;
+         while (i < sum.Length)
          {
-            for (int j = i + 1; j < sum.Length; j++)
+            int j = i + 1;
+            while (j < sum.Length)
             {
                if (sum[i] < sum[j])
                {
@@ -82,16 +84,20 @@ namespace Homework_5._3
                   sum[i] = sum[j];
                   sum[j] = tmp;
                }
+
+               j++;
             }
+
+            i++;
          }
 
-         int x = 0;
-         while (x < sum.GetLength(0))
+         int k = 0;
+         while (k < sum.GetLength(0))
          {
-            //Console.Write(sum[x] + " ");
-            //Console.Write("{0:f2} ", sum[x]);
-            Console.Write("{0:f} ", sum[x]);
-            x++;
+            //Console.Write(sum[k] + " ");
+            //Console.Write("{0:f2} ", sum[k]);
+            Console.Write("{0:f} ", sum[k]);
+            k++;
          }
       }
 
