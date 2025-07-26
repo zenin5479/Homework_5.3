@@ -42,7 +42,7 @@ namespace Homework_5._3
             {
                for (int k = i + 1; k < num.GetLength(0); k++)
                {
-                  if (sum[i] > sum[i + 1])
+                  if (sum[i] > sum[k])
                   {
                      double tmp = num[i, j];
                      num[i, j] = num[k, j];
