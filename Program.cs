@@ -40,7 +40,7 @@ namespace Homework_5._3
          Puzurek(number, summa);
          Console.ReadKey();
       }
-      
+
       static void Puzurek(double[,] num, double[] sum)
       {
          for (int i = 0; i < num.GetLength(0); i++)
@@ -55,7 +55,7 @@ namespace Homework_5._3
                //}
 
                Console.Write(num[i, j] + " ");
-               
+
                //double buf = num[i, j];
                //num[i, j] = num[i + 1, j];
                //num[i + 1, j] = buf;
@@ -69,13 +69,18 @@ namespace Homework_5._3
 
       public static void EnterArrayDouble(double[,] num)
       {
-         for (int i = 0; i < num.GetLength(0); i++)
+         Console.WriteLine("Двумерный числовой массив для проведения поиска");
+         int i = 0;
+         while (i < num.GetLength(0))
          {
-            for (int j = 0; j < num.GetLength(1); j++)
+            int j = 0;
+            while (j < num.GetLength(1))
             {
                Console.Write(num[i, j] + " ");
+               j++;
             }
 
+            i++;
             Console.WriteLine();
          }
       }
