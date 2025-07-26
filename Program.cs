@@ -17,16 +17,16 @@ namespace Homework_5._3
       {
          double[,] number =
          {
-            {-87.39, -12.38, -88.93, -6.05, 73.40 },
-            {-48.09, 54.51, 81.36, -71.55, 47.46},
-            {86.13, -18.24, -75.57, 77.51, -5.61},
-            {25.65, 26.89, 37.29, -3.93, -12.94},
+            {77.39, -12.38, -58.93, -6.05, -77.40 },
+            {-48.09, 51.51, -48.36, -71.55, 47.46},
+            {86.13, -18.24, -75.57, 82.51, -5.61},
+            {25.65, 31.89, 37.29, -3.93, -12.94},
          };
 
          double[] summa = Sum(number);
          EnterArrayDouble(summa);
          Console.WriteLine();
-         //EnterArrayDouble(number);
+         EnterArrayDouble(number);
          Puzurek(summa);
          Console.WriteLine();
          Puzurek(number, summa);
@@ -71,7 +71,7 @@ namespace Homework_5._3
 
       static void Puzurek(double[] sum)
       {
-         Console.WriteLine("Двумерный числовой массив");
+         Console.WriteLine("Одномерный числовой массив");
          for (int i = 0; i < sum.Length; i++)
          {
             for (int j = i + 1; j < sum.Length; j++)
