@@ -52,19 +52,19 @@ namespace Homework_5._3
             }
          }
 
-         int x = 0;
-         while (x < array.GetLength(0))
+         int l = 0;
+         while (l < array.GetLength(0))
          {
-            int z = 0;
-            while (z < array.GetLength(1))
+            int m = 0;
+            while (m < array.GetLength(1))
             {
-               Console.Write(array[x, z] + " ");
-               Console.Write("{0:f2} ", array[x, z]);
-               Console.Write("{0:f} ", array[x, z]);
-               z++;
+               Console.Write(array[l, m] + " ");
+               ////Console.Write("{0:f2} ", array[l, m]);
+               //Console.Write("{0:f} ", array[l, m]);
+               m++;
             }
 
-            x++;
+            l++;
             Console.WriteLine();
          }
       }
@@ -110,9 +110,9 @@ namespace Homework_5._3
             int j = 0;
             while (j < num.GetLength(1))
             {
-               //Console.Write("{0:f2} ", num[i, j]);
-               //Console.Write("{0:f} ", num[i, j]);
                Console.Write(num[i, j] + " ");
+               //Console.Write("{0:f} ", num[i, j]);
+               //Console.Write("{0:f2} ", num[i, j]);
                j++;
             }
 
