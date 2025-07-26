@@ -54,11 +54,11 @@ namespace Homework_5._3
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < num.GetLength(0); i++)
          {
-            for (int j = 0; j < num.GetLength(1); j++)
+            for (int k = i + 1; k < num.GetLength(0); k++)
             {
-               for (int k = i + 1; k < num.GetLength(0); k++)
+               if (sum[i] < sum[i + 1])
                {
-                  if (sum[i] < sum[i + 1])
+                  for (int j = 0; j < num.GetLength(1); j++)
                   {
                      double tmp = num[i, j];
                      num[i, j] = num[k, j];
