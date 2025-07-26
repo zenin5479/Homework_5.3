@@ -35,10 +35,9 @@ namespace Homework_5._3
          int i = 0;
          while (i < summa.Length)
          {
-            Console.Write(summa[i] + " ");
-
-            Console.Write("{0:f2} ", outputArray[i, j]);
-            Console.Write("{0:f} ", outputArray[i, j]);
+            //Console.Write(summa[i] + " ");
+            //Console.Write("{0:f2} ", summa[i]);
+            Console.Write("{0:f} ", summa[i]);
             i++;
          }
 
