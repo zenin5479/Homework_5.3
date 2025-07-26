@@ -41,7 +41,7 @@ namespace Homework_5._3
       static void Puzurek(double[,] num, double[] sum)
       {
          Console.WriteLine("Двумерный числовой массив");
-         for (int i = 0; i < sum.Length - 1; i++)
+         for (int i = 0; i < sum.Length; i++)
          {
             for (int j = i + 1; j < sum.Length; j++)
             {
