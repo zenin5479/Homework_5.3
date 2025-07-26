@@ -33,34 +33,34 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      static void BubbleSort(double[,] num, double[] sum)
+      static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
-         for (int i = 0; i < num.GetLength(0); i++)
+         for (int i = 0; i < array.GetLength(0); i++)
          {
-            for (int j = 0; j < num.GetLength(1); j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-               for (int k = i + 1; k < num.GetLength(0); k++)
+               for (int k = i + 1; k < array.GetLength(0); k++)
                {
-                  if (sum[i] > sum[k])
+                  if (data[i] > data[k])
                   {
-                     double tmp = num[i, j];
-                     num[i, j] = num[k, j];
-                     num[k, j] = tmp;
+                     double tmp = array[i, j];
+                     array[i, j] = array[k, j];
+                     array[k, j] = tmp;
                   }
                }
             }
          }
 
          int x = 0;
-         while (x < num.GetLength(0))
+         while (x < array.GetLength(0))
          {
             int z = 0;
-            while (z < num.GetLength(1))
+            while (z < array.GetLength(1))
             {
-               Console.Write(num[x, z] + " ");
-               //Console.Write("{0:f2} ", num[x, z]);
-               //Console.Write("{0:f} ", num[x, z]);
+               Console.Write(array[x, z] + " ");
+               Console.Write("{0:f2} ", array[x, z]);
+               Console.Write("{0:f} ", array[x, z]);
                z++;
             }
 
