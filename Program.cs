@@ -40,27 +40,33 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
+      
+      
+      
       static void Puzurek(double[,] num, double[] sum)
       {
-         for (int i = 0; i < num.GetLength(0) - 1; i++)
+         for (int i = 0; i < num.GetLength(0); i++)
          {
-            if (sum[i] < sum[i + 1])
+            for (int j = 0; j < num.GetLength(1); j++)
             {
-               double temp = sum[i];
-               sum[i] = sum[i + 1];
-               sum[i + 1] = temp;
+               //if (sum[i] < sum[i + 1])
+               //{
+               //   //double temp = sum[i];
+               //   //sum[i] = sum[i + 1];
+               //   //sum[i + 1] = temp;
+               //}
 
-               for (int j = 0; j < num.GetLength(1); j++)
-               {
-                  double buf = num[i, j];
-                  num[i, j] = num[i + 1, j];
-                  num[i + 1, j] = buf;
-                  Console.Write(buf + " ");
-               }
-
-               //Console.WriteLine(sum[i]);
-               Console.WriteLine();
+               Console.Write(num[i, j] + " ");
+               
+               //double buf = num[i, j];
+               //num[i, j] = num[i + 1, j];
+               //num[i + 1, j] = buf;
+               //Console.Write(buf + " ");
             }
+
+            //Console.WriteLine(sum[i]);
+            Console.WriteLine();
+
          }
       }
 
