@@ -69,20 +69,20 @@ namespace Homework_5._3
          }
       }
 
-      static void BubbleSort(double[] sum)
+      static void BubbleSort(double[] array)
       {
          Console.WriteLine("Одномерный числовой массив");
          int i = 0;
-         while (i < sum.Length)
+         while (i < array.Length)
          {
             int j = i + 1;
-            while (j < sum.Length)
+            while (j < array.Length)
             {
-               if (sum[i] < sum[j])
+               if (array[i] < array[j])
                {
-                  double tmp = sum[i];
-                  sum[i] = sum[j];
-                  sum[j] = tmp;
+                  double tmp = array[i];
+                  array[i] = array[j];
+                  array[j] = tmp;
                }
 
                j++;
@@ -92,11 +92,11 @@ namespace Homework_5._3
          }
 
          int k = 0;
-         while (k < sum.GetLength(0))
+         while (k < array.GetLength(0))
          {
-            //Console.Write(sum[k] + " ");
-            //Console.Write("{0:f2} ", sum[k]);
-            Console.Write("{0:f} ", sum[k]);
+            //Console.Write(array[k] + " ");
+            //Console.Write("{0:f2} ", array[k]);
+            Console.Write("{0:f} ", array[k]);
             k++;
          }
       }
