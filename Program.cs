@@ -50,13 +50,13 @@ namespace Homework_5._3
                sum[i] = sum[i + 1];
                sum[i + 1] = temp;
 
-               //for (int j = 0; j < num.GetLength(1); j++)
-               //{
-               //   double buf = num[i, j];
-               //   num[i, j] = num[i + 1, j];
-               //   num[i + 1, j] = buf;
-               //   Console.Write(buf + " ");
-               //}
+               for (int j = 0; j < num.GetLength(1); j++)
+               {
+                  double buf = num[i, j];
+                  num[i, j] = num[i + 1, j];
+                  num[i + 1, j] = buf;
+                  Console.Write(buf + " ");
+               }
 
                Console.WriteLine(sum[i]);
             }
