@@ -31,9 +31,15 @@ namespace Homework_5._3
          };
 
          double[] summa = Sum(number);
-         foreach (int rus in summa)
+
+         int i = 0;
+         while (i < summa.Length)
          {
-            Console.Write(rus + " ");
+            Console.Write(summa[i] + " ");
+
+            Console.Write("{0:f2} ", outputArray[i, j]);
+            Console.Write("{0:f} ", outputArray[i, j]);
+            i++;
          }
 
          Console.WriteLine();
