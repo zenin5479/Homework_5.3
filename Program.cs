@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 // Разработка программ с самостоятельным выделением подзадач
 // Требуется выделить подзадачи, реализовать их решения подпрограммами, а затем собрать из них программу для решения всей задачи
@@ -31,16 +30,8 @@ namespace Homework_5._3
          };
 
          double[] summa = Sum(number);
-         int i = 0;
-         while (i < summa.Length)
-         {
-            //Console.Write(summa[i] + " ");
-            //Console.Write("{0:f2} ", summa[i]);
-            Console.Write("{0:f} ", summa[i]);
-            i++;
-         }
-         Console.WriteLine();
          EnterArrayDouble(summa);
+         Console.WriteLine();
          EnterArrayDouble(number);
          //Puzurek(number, summa);
 
