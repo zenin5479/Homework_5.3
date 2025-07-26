@@ -61,9 +61,6 @@ namespace Homework_5._3
                //Console.WriteLine(sum[i]);
                Console.WriteLine();
             }
-
-
-
          }
       }
 
