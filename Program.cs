@@ -17,13 +17,10 @@ namespace Homework_5._3
       {
          double[,] number =
          {
-            {-87.39, -12.38, -88.93, -6.05, 73.40, -35.01, -56.16, 42.12, -99.55, 53.52 },
-            {-48.09, 59.51, -91.36, -71.55, 47.46, -0.57, -5.72, -73.92, 8.37, 18.60 },
-            {-86.13, -18.24, 55.57, -77.51, -5.61, -2.62, 68.96, 47.36, -24.51, 65.83 },
-            {-75.65, -26.89, -47.29, -3.93, -12.94, -99.92, -87.51, -98.39, 22.97, 44.00},
-            {-65.25, -92.37, 33.10, -40.81, 39.64, 45.73, -11.94, 89.37, -46.13, 73.43},
-            {2.23, 2.99, -72.07, -7.00, 15.44, 57.75, 15.24, -98.13, 73.88, 66.98},
-            {-84.66, -33.08, -69.47, -46.32, -20.73, -42.17, -19.94, -66.76, 23.69, 83.48 }
+            {-87.39, -12.38, -88.93, -6.05, 73.40 },
+            {-48.09, 59.51, -91.36, -71.55, 47.46},
+            {-86.13, -18.24, 55.57, -77.51, -5.61},
+            {-75.65, -26.89, -47.29, -3.93, -12.94},
          };
 
          double[] summa = Sum(number);
@@ -31,6 +28,7 @@ namespace Homework_5._3
          Console.WriteLine();
          //EnterArrayDouble(number);
          Puzurek(summa);
+         Console.WriteLine();
          Puzurek(number);
          Console.ReadKey();
       }
@@ -42,7 +40,7 @@ namespace Homework_5._3
          {
             for (int j = 0; j < num.GetLength(1); j++)
             {
-               for (int k = i + 1; k < num.Length; k++)
+               for (int k = i + 1; k < num.GetLength(0); k++)
                {
                   if (num[i, j] < num[k, j])
                   {
@@ -61,10 +59,12 @@ namespace Homework_5._3
             while (z < num.GetLength(0))
             {
                Console.Write(num[x, z] + " ");
-               Console.Write("{0:f2} ", num[x, z]);
-               Console.Write("{0:f} ", num[x, z]);
+               //Console.Write("{0:f2} ", num[x, z]);
+               //Console.Write("{0:f} ", num[x, z]);
                z++;
             }
+
+            Console.WriteLine();
 
             x++;
          }
