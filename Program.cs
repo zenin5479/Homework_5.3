@@ -35,58 +35,58 @@ namespace Homework_5._3
 
       static void Puzurek(double[,] num, double[] sum)
       {
-         //for (int i = 0; i < num.GetLength(0); i++)
-         //{
-         //   for (int j = 0; j < num.GetLength(1); j++)
-         //   {
-         //      for (int k = i + 1; k < num.GetLength(0); k++)
-         //      {
-         //         if (num[i, j] < num[k, j])
-         //         {
-         //            double tmp = num[i, j];
-         //            num[i, j] = num[k, j];
-         //            num[k, j] = tmp;
-         //         }
-         //      }
-         //   }
-         //}
-
-         Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < num.GetLength(0); i++)
          {
             for (int j = 0; j < num.GetLength(1); j++)
             {
                for (int k = i + 1; k < num.GetLength(0); k++)
                {
-                  if (sum[i] > sum[i + 1])
+                  if (num[i, j] < num[k, j])
                   {
                      double tmp = num[i, j];
                      num[i, j] = num[k, j];
                      num[k, j] = tmp;
                   }
-
-                  Console.Write(num[i, j] + " ");
                }
-
-               Console.WriteLine();
             }
          }
 
-         //int x = 0;
-         //while (x < num.GetLength(0))
+         //Console.WriteLine("Двумерный числовой массив");
+         //for (int i = 0; i < num.GetLength(0); i++)
          //{
-         //   int z = 0;
-         //   while (z < num.GetLength(1))
+         //   for (int j = 0; j < num.GetLength(1); j++)
          //   {
-         //      Console.Write(num[x, z] + " ");
-         //      //Console.Write("{0:f2} ", num[x, z]);
-         //      //Console.Write("{0:f} ", num[x, z]);
-         //      z++;
-         //   }
+         //      for (int k = i + 1; k < num.GetLength(0); k++)
+         //      {
+         //         if (sum[i] > sum[i + 1])
+         //         {
+         //            double tmp = num[i, j];
+         //            num[i, j] = num[k, j];
+         //            num[k, j] = tmp;
+         //         }
 
-         //   x++;
-         //   Console.WriteLine();
+         //         Console.Write(num[i, j] + " ");
+         //      }
+
+         //      Console.WriteLine();
+         //   }
          //}
+
+         int x = 0;
+         while (x < num.GetLength(0))
+         {
+            int z = 0;
+            while (z < num.GetLength(1))
+            {
+               Console.Write(num[x, z] + " ");
+               //Console.Write("{0:f2} ", num[x, z]);
+               //Console.Write("{0:f} ", num[x, z]);
+               z++;
+            }
+
+            x++;
+            Console.WriteLine();
+         }
       }
 
       static void Puzurek(double[] sum)
