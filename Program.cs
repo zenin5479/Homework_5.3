@@ -31,7 +31,6 @@ namespace Homework_5._3
          };
 
          double[] summa = Sum(number);
-
          int i = 0;
          while (i < summa.Length)
          {
@@ -40,9 +39,11 @@ namespace Homework_5._3
             Console.Write("{0:f} ", summa[i]);
             i++;
          }
-
          Console.WriteLine();
-         Puzurek(number, summa);
+         EnterArrayDouble(summa);
+         EnterArrayDouble(number);
+         //Puzurek(number, summa);
+
          Console.ReadKey();
       }
 
@@ -74,7 +75,7 @@ namespace Homework_5._3
 
       public static void EnterArrayDouble(double[,] num)
       {
-         Console.WriteLine("Двумерный числовой массив для проведения поиска");
+         Console.WriteLine("Двумерный числовой массив");
          int i = 0;
          while (i < num.GetLength(0))
          {
@@ -90,7 +91,18 @@ namespace Homework_5._3
          }
       }
 
-
+      public static void EnterArrayDouble(double[] num)
+      {
+         Console.WriteLine("Одномерный числовой массив");
+         int i = 0;
+         while (i < num.GetLength(0))
+         {
+            //Console.Write(num[i] + " ");
+            //Console.Write("{0:f2} ", num[i]);
+            Console.Write("{0:f} ", num[i]);
+            i++;
+         }
+      }
       private static double[] Sum(double[,] arr)
       {
          double[] y = new double[arr.GetLength(0)];
