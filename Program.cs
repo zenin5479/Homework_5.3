@@ -29,11 +29,11 @@ namespace Homework_5._3
          //EnterArrayDouble(number);
          Puzurek(summa);
          Console.WriteLine();
-         Puzurek(number);
+         Puzurek(number, summa);
          Console.ReadKey();
       }
 
-      static void Puzurek(double[,] num)
+      static void Puzurek(double[,] num, double[] sum)
       {
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < num.GetLength(0); i++)
@@ -42,7 +42,7 @@ namespace Homework_5._3
             {
                for (int k = i + 1; k < num.GetLength(0); k++)
                {
-                  if (num[i, j] < num[k, j])
+                  if (sum[i] < sum[i + 1])
                   {
                      double tmp = num[i, j];
                      num[i, j] = num[k, j];
