@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace LibraryFor2DArray
+namespace Homework_5._3
 {
    public class VariousMethods
    {
