@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // Разработка программ с самостоятельным выделением подзадач
 // Требуется выделить подзадачи, реализовать их решения подпрограммами, а затем собрать из них программу для решения всей задачи
@@ -39,9 +40,6 @@ namespace Homework_5._3
          Puzurek(number, summa);
          Console.ReadKey();
       }
-
-      
-      
       
       static void Puzurek(double[,] num, double[] sum)
       {
@@ -66,9 +64,22 @@ namespace Homework_5._3
 
             //Console.WriteLine(sum[i]);
             Console.WriteLine();
-
          }
       }
+
+      public static void EnterArrayDouble(double[,] num)
+      {
+         for (int i = 0; i < num.GetLength(0); i++)
+         {
+            for (int j = 0; j < num.GetLength(1); j++)
+            {
+               Console.Write(num[i, j] + " ");
+            }
+
+            Console.WriteLine();
+         }
+      }
+
 
       private static double[] Sum(double[,] arr)
       {
