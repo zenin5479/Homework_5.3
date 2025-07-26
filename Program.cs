@@ -33,7 +33,7 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      static void BubbleSort(double[,] array, double[] data)
+      public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < array.GetLength(0); i++)
@@ -69,7 +69,7 @@ namespace Homework_5._3
          }
       }
 
-      static void BubbleSort(double[] array)
+      public static void BubbleSort(double[] array)
       {
          Console.WriteLine("Одномерный числовой массив");
          int i = 0;
@@ -134,7 +134,7 @@ namespace Homework_5._3
          }
       }
 
-      private static double[] Sum(double[,] arr)
+      public static double[] Sum(double[,] arr)
       {
          double[] y = new double[arr.GetLength(0)];
          for (int i = 0; i < arr.GetLength(0); i++)
@@ -151,7 +151,7 @@ namespace Homework_5._3
          return y;
       }
 
-      private static void SwitchRows(int[,] array)
+      public static void SwitchRows(int[,] array)
       {
 
       }
