@@ -33,16 +33,19 @@ namespace Homework_5._3
          EnterArrayDouble(summa);
          Console.WriteLine();
          EnterArrayDouble(number);
-         //Puzurek(number, summa);
+         Puzurek(number, summa);
 
          Console.ReadKey();
       }
 
       static void Puzurek(double[,] num, double[] sum)
       {
-         for (int i = 0; i < num.GetLength(0); i++)
+         Console.WriteLine("Двумерный числовой массив");
+         int i = 0;
+         while (i < num.GetLength(0))
          {
-            for (int j = 0; j < num.GetLength(1); j++)
+            int j = 0;
+            while (j < num.GetLength(1))
             {
                //if (sum[i] < sum[i + 1])
                //{
@@ -51,15 +54,19 @@ namespace Homework_5._3
                //   //sum[i + 1] = temp;
                //}
 
-               Console.Write(num[i, j] + " ");
-
                //double buf = num[i, j];
                //num[i, j] = num[i + 1, j];
                //num[i + 1, j] = buf;
                //Console.Write(buf + " ");
+
+               //Console.WriteLine(sum[i]);
+               Console.Write(num[i, j] + " ");
+               //Console.Write("{0:f2} ", num[i, j]);
+               //Console.Write("{0:f} ", num[i, j]);
+               j++;
             }
 
-            //Console.WriteLine(sum[i]);
+            i++;
             Console.WriteLine();
          }
       }
@@ -96,6 +103,7 @@ namespace Homework_5._3
             i++;
          }
       }
+
       private static double[] Sum(double[,] arr)
       {
          double[] y = new double[arr.GetLength(0)];
