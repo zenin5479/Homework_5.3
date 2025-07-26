@@ -95,8 +95,8 @@ namespace Homework_5._3
          while (k < array.GetLength(0))
          {
             //Console.Write(array[k] + " ");
-            //Console.Write("{0:f2} ", array[k]);
             Console.Write("{0:f} ", array[k]);
+            //Console.Write("{0:f2} ", array[k]);
             k++;
          }
       }
@@ -128,8 +128,8 @@ namespace Homework_5._3
          while (i < num.GetLength(0))
          {
             //Console.Write(num[i] + " ");
-            //Console.Write("{0:f2} ", num[i]);
             Console.Write("{0:f} ", num[i]);
+            //Console.Write("{0:f2} ", num[i]);
             i++;
          }
       }
