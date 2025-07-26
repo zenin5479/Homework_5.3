@@ -73,6 +73,8 @@ namespace Homework_5._3
             int j = 0;
             while (j < num.GetLength(1))
             {
+               //Console.Write("{0:f2} ", num[i, j]);
+               //Console.Write("{0:f} ", num[i, j]);
                Console.Write(num[i, j] + " ");
                j++;
             }
