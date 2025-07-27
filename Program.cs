@@ -30,10 +30,11 @@ namespace Homework_5._3
          BubbleSort(summa);
          Console.WriteLine();
          BubbleSort(number, summa);
+         BubbleSortByRows(number);
          Console.ReadKey();
       }
 
-      void BubbleSortByRows(int[,] array)
+      static void BubbleSortByRows(double[,] array)
       {
          int rows = array.GetLength(0);
          int cols = array.GetLength(1);
@@ -53,9 +54,9 @@ namespace Homework_5._3
          }
       }
 
-      void Swap(ref int a, ref int b)
+      static void Swap(ref double a, ref double b)
       {
-         int temp = a;
+         d temp = a;
          a = b;
          b = temp;
       }
