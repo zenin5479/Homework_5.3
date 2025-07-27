@@ -33,6 +33,26 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
+      void BubbleSortByRows(int[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         for (int row = 0; row < rows; row++)
+         {
+            for (int i = 0; i < cols - 1; i++)
+            {
+               for (int j = 0; j < cols - i - 1; j++)
+               {
+                  if (array[row, j] > array[row, j + 1])
+                  {
+                     Swap(ref array[row, j], ref array[row, j + 1]);
+                  }
+               }
+            }
+         }
+      }
+
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
