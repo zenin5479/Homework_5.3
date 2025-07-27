@@ -56,7 +56,7 @@ namespace Homework_5._3
 
       static void Swap(ref double a, ref double b)
       {
-         d temp = a;
+         double temp = a;
          a = b;
          b = temp;
       }
