@@ -53,6 +53,13 @@ namespace Homework_5._3
          }
       }
 
+      void Swap(ref int a, ref int b)
+      {
+         int temp = a;
+         a = b;
+         b = temp;
+      }
+
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
