@@ -47,7 +47,12 @@ namespace Homework_5._3
                {
                   if (array[row, j] > array[row, j + 1])
                   {
-                     Swap(ref array[row, j], ref array[row, j + 1]);
+                     double temp = array[row, j];
+                     array[row, j] = array[row, j + 1];
+                     array[row, j + 1] = temp;
+
+
+                     //Swap(ref array[row, j], ref array[row, j + 1]);
                   }
                }
             }
