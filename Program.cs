@@ -85,9 +85,9 @@ namespace Homework_5._3
          Console.WriteLine("Двумерный числовой массив");
          for (int i = 0; i < array.GetLength(0); i++)
          {
-            for (int j = 0; j < array.GetLength(1); j++)
+            for (int j = 0; j < array.GetLength(1); j++) // ????
             {
-               for (int k = i + 1; k < array.GetLength(0) - i; k++)
+               for (int k = i + 1; k < array.GetLength(0) - 1 - i; k++) // ???
                {
                   if (data[i] > data[k])
                   {
