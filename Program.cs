@@ -55,7 +55,7 @@ namespace Homework_5._3
                }
             }
          }
-        
+
          int l = 0;
          while (l < array.GetLength(0))
          {
