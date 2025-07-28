@@ -31,6 +31,7 @@ namespace Homework_5._3
          Console.WriteLine();
          BubbleSort(number, summa);
          BubbleSortByRows(number);
+
          Console.ReadKey();
       }
 
