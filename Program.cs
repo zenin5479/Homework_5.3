@@ -72,8 +72,6 @@ namespace Homework_5._3
          }
       }
 
-      
-
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
