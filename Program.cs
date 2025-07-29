@@ -32,7 +32,7 @@ namespace Homework_5._3
          Console.WriteLine();
          EnterArrayDouble(number);
          //BubbleSort(summa);
-         Console.WriteLine();
+         //Console.WriteLine();
          BubbleSort(number, summa);
          //Console.WriteLine();
          //BubbleSortByRows(number);
@@ -47,7 +47,7 @@ namespace Homework_5._3
          {
             for (int j = 0; j < array.GetLength(1); j++) // ????
             {
-               for (int k = i + 1; k < array.GetLength(1); k++) // ???
+               for (int k = i + 1; k < array.GetLength(0) - i; k++) // ???
                {
                   if (data[i] < data[k])
                   {
