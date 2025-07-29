@@ -55,10 +55,17 @@ namespace Homework_5._3
                   data[i] = data[j];
                   data[j] = tmp;
 
+                  int k = i + 1;
+                  while (k < array.GetLength(0))
+                  {
 
-
-
-
+                   
+                     
+                     
+                     
+                     
+                     k++;
+                  }
                }
 
                j++;
@@ -78,10 +85,10 @@ namespace Homework_5._3
          //      {
          //         if (data[i] < data[k])
          //         {
-                    
-                     
-                     
-                     
+
+
+
+
          //            double tmp = array[i, j];
          //            array[i, j] = array[k, j];
          //            array[k, j] = tmp;
