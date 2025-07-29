@@ -42,44 +42,6 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      static void BubbleSortByRows(double[,] array)
-      {
-         int rows = array.GetLength(0);
-         int cols = array.GetLength(1);
-
-         for (int row = 0; row < rows; row++)
-         {
-            for (int i = 0; i < cols - 1; i++)
-            {
-               for (int j = 0; j < cols - i - 1; j++)
-               {
-                  if (array[row, j] > array[row, j + 1])
-                  {
-                     double temp = array[row, j];
-                     array[row, j] = array[row, j + 1];
-                     array[row, j + 1] = temp;
-                  }
-               }
-            }
-         }
-
-         int l = 0;
-         while (l < array.GetLength(0))
-         {
-            int m = 0;
-            while (m < array.GetLength(1))
-            {
-               Console.Write(array[l, m] + " ");
-               //Console.Write("{0:f} ", array[l, m]);
-               //Console.Write("{0:f2} ", array[l, m]);
-               m++;
-            }
-
-            l++;
-            Console.WriteLine();
-         }
-      }
-
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
@@ -87,7 +49,7 @@ namespace Homework_5._3
          {
             for (int j = 0; j < array.GetLength(1); j++) // ????
             {
-               for (int k = i + 1; k < array.GetLength(0)-1; k++) // ???
+               for (int k = i + 1; k < array.GetLength(0) - 1; k++) // ???
                {
                   if (data[i] > data[k])
                   {
@@ -148,6 +110,43 @@ namespace Homework_5._3
          }
       }
 
+      static void BubbleSortByRows(double[,] array)
+      {
+         int rows = array.GetLength(0);
+         int cols = array.GetLength(1);
+
+         for (int row = 0; row < rows; row++)
+         {
+            for (int i = 0; i < cols - 1; i++)
+            {
+               for (int j = 0; j < cols - i - 1; j++)
+               {
+                  if (array[row, j] > array[row, j + 1])
+                  {
+                     double temp = array[row, j];
+                     array[row, j] = array[row, j + 1];
+                     array[row, j + 1] = temp;
+                  }
+               }
+            }
+         }
+
+         int l = 0;
+         while (l < array.GetLength(0))
+         {
+            int m = 0;
+            while (m < array.GetLength(1))
+            {
+               Console.Write(array[l, m] + " ");
+               //Console.Write("{0:f} ", array[l, m]);
+               //Console.Write("{0:f2} ", array[l, m]);
+               m++;
+            }
+
+            l++;
+            Console.WriteLine();
+         }
+      }
       public static void EnterArrayDouble(double[,] num)
       {
          Console.WriteLine("Двумерный числовой массив");
