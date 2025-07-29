@@ -43,21 +43,52 @@ namespace Homework_5._3
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
-         for (int i = 0; i < array.GetLength(0); i++)
+         int i = 0;
+         while (i < data.Length)
          {
-            for (int j = 0; j < array.GetLength(1); j++) // ????
+            int j = i + 1;
+            while (j < data.Length)
             {
-               for (int k = i + 1; k < array.GetLength(0); k++) // ???
+               if (data[i] < data[j])
                {
-                  if (data[i] < data[k])
-                  {
-                     double tmp = array[i, j];
-                     array[i, j] = array[k, j];
-                     array[k, j] = tmp;
-                  }
+                  double tmp = data[i];
+                  data[i] = data[j];
+                  data[j] = tmp;
+
+
+
+
+
                }
+
+               j++;
             }
+
+            i++;
          }
+
+
+
+
+         //for (int i = 0; i < array.GetLength(0); i++)
+         //{
+         //   for (int j = 0; j < array.GetLength(1); j++) // ????
+         //   {
+         //      for (int k = i + 1; k < array.GetLength(0); k++) // ???
+         //      {
+         //         if (data[i] < data[k])
+         //         {
+                    
+                     
+                     
+                     
+         //            double tmp = array[i, j];
+         //            array[i, j] = array[k, j];
+         //            array[k, j] = tmp;
+         //         }
+         //      }
+         //   }
+         //}
 
          int l = 0;
          while (l < array.GetLength(0))
@@ -90,6 +121,8 @@ namespace Homework_5._3
                   double tmp = array[i];
                   array[i] = array[j];
                   array[j] = tmp;
+
+
                }
 
                j++;
