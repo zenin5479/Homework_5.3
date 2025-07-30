@@ -33,8 +33,8 @@ namespace Homework_5._3
          EnterArrayDouble(number);
          //BubbleSort(summa);
          Console.WriteLine();
-         BubbleSort(number, summa);
-         Console.WriteLine();
+         //BubbleSort(number, summa);
+         //Console.WriteLine();
          BubbleSortByRows(number);
 
          Console.ReadKey();
