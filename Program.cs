@@ -233,7 +233,6 @@ namespace Homework_5._3
             }
 
             y[i] = sum;
-            Console.Write(i+ " ");
          }
 
          return y;
