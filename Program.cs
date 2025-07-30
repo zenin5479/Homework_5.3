@@ -31,7 +31,7 @@ namespace Homework_5._3
          EnterArrayDouble(summa);
          Console.WriteLine();
          EnterArrayDouble(number);
-         BubbleSort(summa);
+         //BubbleSort(summa);
          Console.WriteLine();
          BubbleSort(number, summa);
          //Console.WriteLine();
@@ -59,23 +59,19 @@ namespace Homework_5._3
                   int k = i + 1;
                   while (k < array.GetLength(0))
                   {
-                      double tp = array[s, r];
-                                 array[s, r] = array[z, r];
-                                 array[z, r] = tp;
-                     
-                     //for (int s = 0; s < array.GetLength(0); s++)
-                     //{
-                     //   for (int r = 0; r < array.GetLength(1); r++) // ????
-                     //   {
-                     //      for (int z = s + 1; z < array.GetLength(0); z++) // ???
-                     //      {
-                     //         if (data[s] < data[z])
-                     //         {
-                                
-                     //         }
-                     //      }
-                     //   }
-                     //}
+                     int r = 0;
+                     while (r < array.GetLength(1))
+                     {
+                        double tp = array[i, r];
+                        array[i, r] = array[k, r];
+                        array[k, r] = tp;
+
+                        //double tmp = array[i, j];
+                        //array[i, j] = array[k, j];
+                        //array[k, j] = tmp;
+
+                        r++;
+                     }
 
                      k++;
                   }
@@ -95,9 +91,7 @@ namespace Homework_5._3
          //      {
          //         if (data[i] < data[k])
          //         {
-         //            double tmp = array[i, j];
-         //            array[i, j] = array[k, j];
-         //            array[k, j] = tmp;
+         //            
          //         }
          //      }
          //   }
