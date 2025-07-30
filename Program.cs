@@ -34,8 +34,8 @@ namespace Homework_5._3
          //BubbleSort(summa);
          Console.WriteLine();
          BubbleSort(number, summa);
-         //Console.WriteLine();
-         //BubbleSortByRows(number);
+         Console.WriteLine();
+         BubbleSortByRows(number);
 
          Console.ReadKey();
       }
@@ -120,6 +120,7 @@ namespace Homework_5._3
          }
       }
 
+      // Пузырьковая сортировка по столбцам двумерного массива ???
       static void BubbleSortByRows(double[,] array)
       {
          int rows = array.GetLength(0);
@@ -205,11 +206,6 @@ namespace Homework_5._3
          }
 
          return y;
-      }
-
-      public static void SwitchRows(int[,] array)
-      {
-
       }
 
       public static int[] SortArray(int[] numArray)
