@@ -131,8 +131,6 @@ namespace Homework_5._3
                   double tmp = array[i];
                   array[i] = array[j];
                   array[j] = tmp;
-
-
                }
 
                j++;
