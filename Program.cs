@@ -16,7 +16,6 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
-         
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
