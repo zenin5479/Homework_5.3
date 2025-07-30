@@ -65,10 +65,8 @@ namespace Homework_5._3
                      k++;
                   }
                }
-
                j++;
             }
-
             i++;
          }
 
