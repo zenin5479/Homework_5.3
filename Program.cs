@@ -63,21 +63,21 @@ namespace Homework_5._3
                      array[i, j] = array[k, j];
                      array[k, j] = tm;
 
-                     //for (int i = 0; i < array.GetLength(0); i++)
-                     //{
-                     //   for (int j = 0; j < array.GetLength(1); j++) // ????
-                     //   {
-                     //      for (int k = i + 1; k < array.GetLength(0); k++) // ???
-                     //      {
-                     //         if (data[i] < data[k])
-                     //         {
-                     //            double tmp = array[i, j];
-                     //            array[i, j] = array[k, j];
-                     //            array[k, j] = tmp;
-                     //         }
-                     //      }
-                     //   }
-                     //}
+                     for (int s = 0; s < array.GetLength(0); s++)
+                     {
+                        for (int r = 0; r < array.GetLength(1); r++) // ????
+                        {
+                           for (int z = s + 1; z < array.GetLength(0); z++) // ???
+                           {
+                              if (data[s] < data[z])
+                              {
+                                 double tp = array[s, r];
+                                 array[s, r] = array[z, r];
+                                 array[z, r] = tp;
+                              }
+                           }
+                        }
+                     }
 
                      k++;
                   }
