@@ -52,21 +52,23 @@ namespace Homework_5._3
             {
                if (data[i] < data[j])
                {
-                  double tmp = data[i];
+                  double tеmpData = data[i];
                   data[i] = data[j];
-                  data[j] = tmp;
+                  data[j] = tеmpData;
 
                   int k = 0;
                   while (k < array.GetLength(1))
                   {
-                     double tp = array[i, k];
+                     double tempArray = array[i, k];
                      array[i, k] = array[j, k];
-                     array[j, k] = tp;
+                     array[j, k] = tempArray;
                      k++;
                   }
                }
+
                j++;
             }
+
             i++;
          }
 
