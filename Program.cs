@@ -22,22 +22,22 @@ namespace Homework_5._3
 
          int rowOne = VariousMethods.SizeRow();
          int columnOne = VariousMethods.SizeColumn();
-         //int multipleElement = VariousMethods.MultipleElement();
+         int multipleElement = VariousMethods.MultipleElement();
 
-         //string pathOne = Path.GetFullPath(nameFileOne);
-         //int[,] sourceOne = VariousMethods.EnterArrayInt(pathOne, nameFileOne);
-         //if (sourceOne.GetLength(0) == 0)
-         //{
-         //   Console.WriteLine("Файл {0} пуст", nameFileOne);
-         //}
-         //else
-         //{
-         //   int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
-         //   string pathTwo = Path.GetFullPath(nameFileTwo);
-         //   File.Create(pathTwo).Close();
-         //   VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
-         //}
-         
+         string pathOne = Path.GetFullPath(nameFileOne);
+         int[,] sourceOne = VariousMethods.EnterArrayInt(pathOne, nameFileOne);
+         if (sourceOne.GetLength(0) == 0)
+         {
+            Console.WriteLine("Файл {0} пуст", nameFileOne);
+         }
+         else
+         {
+            int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
+            string pathTwo = Path.GetFullPath(nameFileTwo);
+            File.Create(pathTwo).Close();
+            VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
+         }
+
          double[,] number =
          {
             {1.11, -12.38, -88.93, -6.05, 73.40, -35.01, -56.16, 42.12, -99.55, 53.52 },
