@@ -58,11 +58,6 @@ namespace Homework_5._3
                   int k = i + 1;
                   while (k < array.GetLength(0))
                   {
-                     // ???
-                     double tm = array[i, j];
-                     array[i, j] = array[k, j];
-                     array[k, j] = tm;
-
                      for (int s = 0; s < array.GetLength(0); s++)
                      {
                         for (int r = 0; r < array.GetLength(1); r++) // ????
