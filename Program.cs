@@ -43,7 +43,6 @@ namespace Homework_5._3
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
-         Console.WriteLine("3 5 6 8 2 1 7 4");
          int i = 0;
          while (i < data.Length)
          {
