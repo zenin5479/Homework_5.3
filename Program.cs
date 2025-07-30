@@ -60,7 +60,7 @@ namespace Homework_5._3
                   while (k < array.GetLength(0))
                   {
                      int r = 0;
-                     while (r < array.GetLength(1))
+                     while (r < array.GetLength(1) - i)
                      {
                         double tp = array[i, r];
                         array[i, r] = array[k, r];
