@@ -120,7 +120,7 @@ namespace Homework_5._3
          }
       }
 
-      // Пузырьковая сортировка по столбцам двумерного массива ???
+      // Пузырьковая сортировка по столбцам двумерного массива
       static void BubbleSortByRows(double[,] array)
       {
          int rows = array.GetLength(0);
