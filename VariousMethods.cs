@@ -664,7 +664,7 @@ namespace Homework_5._3
          return minOne * minTwo - minThree;
       }
 
-      public static void SplittingLines(int[,] input, int multiple, string nameFile)
+      public static void SplittingLines(double[,] input, int multiple, string nameFile)
       {
          int counterMultiple = 0;
          int[] lines = new int[input.GetLength(1)];

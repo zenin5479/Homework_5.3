@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 // Разработка программ с самостоятельным выделением подзадач
 // Требуется выделить подзадачи, реализовать их решения подпрограммами, а затем собрать из них программу для решения всей задачи
@@ -15,6 +16,27 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
+         string nameFileOne = "a.txt";
+         string nameFileTwo = "finish.txt";
+
+         int rowOne = VariousMethods.SizeRow();
+         int columnOne = VariousMethods.SizeColumn();
+         int multipleElement = VariousMethods.MultipleElement();
+
+         string pathOne = Path.GetFullPath(nameFileOne);
+         double[,] sourceOne = VariousMethods.EnterArrayDouble(pathOne, nameFileOne);
+         if (sourceOne.GetLength(0) == 0)
+         {
+            Console.WriteLine("Файл {0} пуст", nameFileOne);
+         }
+         else
+         {
+            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, rowOne, columnOne);
+            string pathTwo = Path.GetFullPath(nameFileTwo);
+            File.Create(pathTwo).Close();
+            VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
+         }
+
          double[,] number =
          {
             {1.11, -12.38, -88.93, -6.05, 73.40, -35.01, -56.16, 42.12, -99.55, 53.52 },
