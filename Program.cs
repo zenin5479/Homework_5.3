@@ -31,7 +31,7 @@ namespace Homework_5._3
          EnterArrayDouble(summa);
          Console.WriteLine();
          EnterArrayDouble(number);
-         //BubbleSort(summa);
+         BubbleSort(summa);
          Console.WriteLine();
          BubbleSort(number, summa);
          //Console.WriteLine();
