@@ -62,14 +62,6 @@ namespace Homework_5._3
                      double tp = array[i, k];
                      array[i, k] = array[j, k];
                      array[j, k] = tp;
-
-                     //double tmp = array[i, j];
-                     //array[i, j] = array[k, j];
-                     //array[k, j] = tmp;
-
-           
-
-
                      k++;
                   }
                }
@@ -79,20 +71,6 @@ namespace Homework_5._3
 
             i++;
          }
-
-         //for (int i = 0; i < array.GetLength(0); i++)
-         //{
-         //   for (int j = 0; j < array.GetLength(1); j++) // ????
-         //   {
-         //      for (int k = i + 1; k < array.GetLength(0); k++) // ???
-         //      {
-         //         if (data[i] < data[k])
-         //         {
-         //            
-         //         }
-         //      }
-         //   }
-         //}
 
          int l = 0;
          while (l < array.GetLength(0))
