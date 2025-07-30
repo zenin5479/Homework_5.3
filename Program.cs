@@ -59,21 +59,23 @@ namespace Homework_5._3
                   int k = i + 1;
                   while (k < array.GetLength(0))
                   {
-                     for (int s = 0; s < array.GetLength(0); s++)
-                     {
-                        for (int r = 0; r < array.GetLength(1); r++) // ????
-                        {
-                           for (int z = s + 1; z < array.GetLength(0); z++) // ???
-                           {
-                              if (data[s] < data[z])
-                              {
-                                 double tp = array[s, r];
+                      double tp = array[s, r];
                                  array[s, r] = array[z, r];
                                  array[z, r] = tp;
-                              }
-                           }
-                        }
-                     }
+                     
+                     //for (int s = 0; s < array.GetLength(0); s++)
+                     //{
+                     //   for (int r = 0; r < array.GetLength(1); r++) // ????
+                     //   {
+                     //      for (int z = s + 1; z < array.GetLength(0); z++) // ???
+                     //      {
+                     //         if (data[s] < data[z])
+                     //         {
+                                
+                     //         }
+                     //      }
+                     //   }
+                     //}
 
                      k++;
                   }
