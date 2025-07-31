@@ -47,11 +47,6 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      /// <summary>
-      /// Пузырьковая сортировка
-      /// </summary>
-      /// <param name="array"></param>
-      /// <param name="data"></param>
       public static void BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
@@ -171,7 +166,6 @@ namespace Homework_5._3
          }
       }
 
-      
       public static void EnterArrayDouble(double[,] num)
       {
          Console.WriteLine("Двумерный числовой массив");
