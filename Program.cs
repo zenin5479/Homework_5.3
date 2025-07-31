@@ -39,7 +39,6 @@ namespace Homework_5._3
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
          }
-
          
 
          //EnterArrayDouble(inputArray);
