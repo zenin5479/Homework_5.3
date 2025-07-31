@@ -20,17 +20,17 @@ namespace Homework_5._3
          string nameFileInput = "finish.txt";
 
          int row = VariousMethods.SizeRow();
-         int columnOne = VariousMethods.SizeColumn();
+         int column = VariousMethods.SizeColumn();
 
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
-         double[,] sourceOne = VariousMethods.EnterArrayDouble(row, columnOne);
+         double[,] sourceOne = VariousMethods.EnterArrayDouble(row, column);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter);
          }
          else
          {
-            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, row, columnOne);
+            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, row, column);
             double[] summa = Sum(inputArray);
             EnterArrayDouble(summa);
             Console.WriteLine();
