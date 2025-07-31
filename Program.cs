@@ -38,12 +38,6 @@ namespace Homework_5._3
             File.Create(pathFileInput).Close();
          }
 
-         //EnterArrayDouble(inputArray);
-         //BubbleSort(summa);
-         //Console.WriteLine();
-         //Console.WriteLine();
-         //BubbleSortByRows(number);
-
          Console.ReadKey();
       }
 
