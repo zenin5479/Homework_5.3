@@ -34,15 +34,10 @@ namespace Homework_5._3
             double[] summa = Sum(inputArray);
             EnterArrayDouble(summa);
             Console.WriteLine();
-            //EnterArrayDouble(inputArray);
-            //BubbleSort(summa);
-            //Console.WriteLine();
-            BubbleSort(inputArray, summa);
-            //Console.WriteLine();
-            //BubbleSortByRows(number);
 
+            BubbleSort(inputArray, summa);
             string pathTwo = Path.GetFullPath(nameFileTwo);
-            File.Create(pathTwo).Close();        
+            File.Create(pathTwo).Close();
          }
 
          double[,] number =
@@ -56,6 +51,12 @@ namespace Homework_5._3
             {7.77, -33.08, -69.47, -46.32, -20.73, -42.17, -19.94, -66.76, 23.69, 83.48 },
             {8.88, 74.65, 60.43, -64.11, -6.15, 81.22, -70.96, 42.83, -75.85, -97.70 }
          };
+
+         //EnterArrayDouble(inputArray);
+         //BubbleSort(summa);
+         //Console.WriteLine();
+         //Console.WriteLine();
+         //BubbleSortByRows(number);
 
          Console.ReadKey();
       }
@@ -178,7 +179,7 @@ namespace Homework_5._3
             Console.WriteLine();
          }
       }
-      
+
       public static void EnterArrayDouble(double[,] num)
       {
          Console.WriteLine("Двумерный числовой массив");
