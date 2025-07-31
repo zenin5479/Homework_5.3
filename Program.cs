@@ -20,18 +20,17 @@ namespace Homework_5._3
          string nameFileTwo = "finish.txt";
 
          int rowOne = VariousMethods.SizeRow();
-         int columnOne = VariousMethods.SizeColumn();
-         int multipleElement = VariousMethods.MultipleElement();
+         int columnOne = VariousMethods.SizeColumn();      
 
          string pathOne = Path.GetFullPath(nameFileOne);
-         int[,] sourceOne = VariousMethods.EnterArrayInt(pathOne, nameFileOne);
+         double[,] sourceOne = VariousMethods.EnterArrayDouble(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
          }
          else
          {
-            int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
+            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
             //VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
