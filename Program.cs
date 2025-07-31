@@ -21,7 +21,7 @@ namespace Homework_5._3
          int row = VariousMethods.SizeRow();
          int column = VariousMethods.SizeColumn();
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
-         double[,] source = VariousMethods.EnterArrayDouble(row, column);
+         double[,] source = VariousMethods.EnterArrayDouble(row, column, pathFileEnter);
          if (source.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter);
@@ -198,7 +198,7 @@ namespace Homework_5._3
             i++;
          }
       }
-      
+
       public static double[] SumRowElements(double[,] array)
       {
          double[] inputArray = new double[array.GetLength(0)];
