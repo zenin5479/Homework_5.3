@@ -201,7 +201,7 @@ namespace Homework_5._3
       
       public static double[] SumRowElements(double[,] array)
       {
-         double[] y = new double[array.GetLength(0)];
+         double[] inputArray = new double[array.GetLength(0)];
          for (int i = 0; i < array.GetLength(0); i++)
          {
             double sum = 0;
@@ -210,10 +210,10 @@ namespace Homework_5._3
                sum += array[i, j];
             }
 
-            y[i] = sum;
+            inputArray[i] = sum;
          }
 
-         return y;
+         return inputArray;
       }
 
       public static int[] SortArray(int[] numArray)
