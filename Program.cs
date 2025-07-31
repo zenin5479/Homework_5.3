@@ -20,7 +20,7 @@ namespace Homework_5._3
          string nameFileTwo = "finish.txt";
 
          int rowOne = VariousMethods.SizeRow();
-         int columnOne = VariousMethods.SizeColumn();      
+         int columnOne = VariousMethods.SizeColumn();
 
          string pathOne = Path.GetFullPath(nameFileOne);
          double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
@@ -31,12 +31,17 @@ namespace Homework_5._3
          else
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, rowOne, columnOne);
-            
-            
-            
-            
-            
-            
+
+            double[] summa = Sum(inputArray);
+            EnterArrayDouble(summa);
+            Console.WriteLine();
+            EnterArrayDouble(inputArray);
+            //BubbleSort(summa);
+            //Console.WriteLine();
+            BubbleSort(inputArray, summa);
+            //Console.WriteLine();
+            //BubbleSortByRows(number);
+
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
             //VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
@@ -54,15 +59,7 @@ namespace Homework_5._3
             {8.88, 74.65, 60.43, -64.11, -6.15, 81.22, -70.96, 42.83, -75.85, -97.70 }
          };
 
-         double[] summa = Sum(number);
-         EnterArrayDouble(summa);
-         Console.WriteLine();
-         EnterArrayDouble(number);
-         //BubbleSort(summa);
-         //Console.WriteLine();
-         BubbleSort(number, summa);
-         //Console.WriteLine();
-         //BubbleSortByRows(number);
+
 
          Console.ReadKey();
       }
