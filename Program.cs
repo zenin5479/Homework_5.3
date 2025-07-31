@@ -18,10 +18,8 @@ namespace Homework_5._3
       {
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
-
          int row = VariousMethods.SizeRow();
          int column = VariousMethods.SizeColumn();
-
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
          double[,] source = VariousMethods.EnterArrayDouble(row, column);
          if (source.GetLength(0) == 0)
