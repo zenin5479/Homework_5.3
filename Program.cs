@@ -29,11 +29,11 @@ namespace Homework_5._3
          else
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
-            double[] summa = SumRowElements(inputArray);
-            EnterArrayDouble(summa);
+            double[] sumRow = SumRowElements(inputArray);
+            EnterArrayDouble(sumRow);
             Console.WriteLine();
 
-            BubbleSort(inputArray, summa);
+            BubbleSort(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
          }
