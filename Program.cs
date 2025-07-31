@@ -34,7 +34,7 @@ namespace Homework_5._3
             int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
-            VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
+            //VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          double[,] number =

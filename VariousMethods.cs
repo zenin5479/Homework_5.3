@@ -664,39 +664,7 @@ namespace Homework_5._3
          return minOne * minTwo - minThree;
       }
 
-      public static void SplittingLines(double[,] input, int multiple, string nameFile)
-      {
-         int counterMultiple = 0;
-         int[] lines = new int[input.GetLength(1)];
-         int i = 0;
-         while (i < input.GetLength(0))
-         {
-            int j = 0;
-            while (j < input.GetLength(1))
-            {
-               lines[j] = input[i, j];
-               j++;
-            }
-
-            if (SearchingMultiple(lines, multiple))
-            {
-               string lineFound = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
-               Console.WriteLine(lineFound);
-               FileAppendStringArray(lineFound, nameFile);
-               counterMultiple++;
-            }
-
-            Array.Clear(lines, 0, lines.Length);
-            i++;
-         }
-
-         if (counterMultiple == 0)
-         {
-            string lineNotFound = "В массиве не найдено строк с элементом, кратным " + multiple;
-            Console.WriteLine(lineNotFound);
-            FileAppendStringArray(lineNotFound, nameFile);
-         }
-      }
+      
 
       public static bool SearchingMultiple(int[] lines, int multiple)
       {
