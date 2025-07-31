@@ -26,7 +26,7 @@ namespace Homework_5._3
          double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
          if (sourceOne.GetLength(0) == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFileOne);
+            Console.WriteLine("Файл {0} пуст", nameFileEnter);
          }
          else
          {
