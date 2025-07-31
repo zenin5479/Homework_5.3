@@ -29,7 +29,7 @@ namespace Homework_5._3
          else
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
-            double[] summa = Sum(inputArray);
+            double[] summa = SumRowElements(inputArray);
             EnterArrayDouble(summa);
             Console.WriteLine();
 
@@ -198,16 +198,16 @@ namespace Homework_5._3
             i++;
          }
       }
-
-      public static double[] Sum(double[,] arr)
+      
+      public static double[] SumRowElements(double[,] array)
       {
-         double[] y = new double[arr.GetLength(0)];
-         for (int i = 0; i < arr.GetLength(0); i++)
+         double[] y = new double[array.GetLength(0)];
+         for (int i = 0; i < array.GetLength(0); i++)
          {
             double sum = 0;
-            for (int j = 0; j < arr.GetLength(1); j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-               sum += arr[i, j];
+               sum += array[i, j];
             }
 
             y[i] = sum;
