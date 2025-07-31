@@ -22,7 +22,7 @@ namespace Homework_5._3
          int rowOne = VariousMethods.SizeRow();
          int columnOne = VariousMethods.SizeColumn();
 
-         string pathOne = Path.GetFullPath(nameFileEnter);
+         string pathFileEnter = Path.GetFullPath(nameFileEnter);
          double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
          if (sourceOne.GetLength(0) == 0)
          {
