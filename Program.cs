@@ -23,7 +23,7 @@ namespace Homework_5._3
          int columnOne = VariousMethods.SizeColumn();      
 
          string pathOne = Path.GetFullPath(nameFileOne);
-         double[,] sourceOne = VariousMethods.EnterArrayDouble(pathOne, nameFileOne);
+         double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
