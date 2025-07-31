@@ -35,7 +35,7 @@ namespace Homework_5._3
             double[] summa = Sum(inputArray);
             EnterArrayDouble(summa);
             Console.WriteLine();
-            EnterArrayDouble(inputArray);
+            //EnterArrayDouble(inputArray);
             //BubbleSort(summa);
             //Console.WriteLine();
             BubbleSort(inputArray, summa);
