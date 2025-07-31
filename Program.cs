@@ -36,7 +36,7 @@ namespace Homework_5._3
             Console.WriteLine();
 
             BubbleSort(inputArray, summa);
-            string pathTwo = Path.GetFullPath(nameFileTwo);
+            string pathTwo = Path.GetFullPath(nameFileInput);
             File.Create(pathTwo).Close();
          }
 
