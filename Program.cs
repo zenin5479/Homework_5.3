@@ -31,6 +31,12 @@ namespace Homework_5._3
          else
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, rowOne, columnOne);
+            
+            
+            
+            
+            
+            
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
             //VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
