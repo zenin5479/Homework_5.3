@@ -16,13 +16,13 @@ namespace Homework_5._3
    {
       static void Main(string[] args)
       {
-         string nameFileOne = "a.txt";
-         string nameFileTwo = "finish.txt";
+         string nameFileEnter = "a.txt";
+         string nameFileInput = "finish.txt";
 
          int rowOne = VariousMethods.SizeRow();
          int columnOne = VariousMethods.SizeColumn();
 
-         string pathOne = Path.GetFullPath(nameFileOne);
+         string pathOne = Path.GetFullPath(nameFileEnter);
          double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
          if (sourceOne.GetLength(0) == 0)
          {
