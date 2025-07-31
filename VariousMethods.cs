@@ -104,12 +104,12 @@ namespace Homework_5._3
          }
          else
          {
-            Console.WriteLine("Исходный массив строк");
+            //Console.WriteLine("Исходный массив строк");
             int indexLines = 0;
             while (indexLines < allLines.Length)
             {
                allLines[indexLines] = allLines[indexLines];
-               Console.WriteLine(allLines[indexLines]);
+               //Console.WriteLine(allLines[indexLines]);
                indexLines++;
             }
 
@@ -145,7 +145,7 @@ namespace Homework_5._3
             }
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            Console.WriteLine("Двухмерный числовой массив");
+            //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
             arrayDouble = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
@@ -167,7 +167,7 @@ namespace Homework_5._3
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDouble[row, column] + " ");
+                        //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
                      }
@@ -176,7 +176,7 @@ namespace Homework_5._3
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToDouble(subLine);
-                        Console.Write(arrayDouble[row, column]);
+                        //Console.Write(arrayDouble[row, column]);
                         stringModified.Clear();
                         column++;
                      }
@@ -187,11 +187,10 @@ namespace Homework_5._3
                   countCharacter = 0;
                }
 
-               Console.WriteLine();
+               //Console.WriteLine();
                column = 0;
                row++;
             }
-            Console.ResetColor();
          }
 
          return arrayDouble;
