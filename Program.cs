@@ -19,18 +19,18 @@ namespace Homework_5._3
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
 
-         int rowOne = VariousMethods.SizeRow();
+         int row = VariousMethods.SizeRow();
          int columnOne = VariousMethods.SizeColumn();
 
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
-         double[,] sourceOne = VariousMethods.EnterArrayDouble(rowOne, columnOne);
+         double[,] sourceOne = VariousMethods.EnterArrayDouble(row, columnOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter);
          }
          else
          {
-            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, rowOne, columnOne);
+            double[,] inputArray = VariousMethods.InputArrayDouble(sourceOne, row, columnOne);
             double[] summa = Sum(inputArray);
             EnterArrayDouble(summa);
             Console.WriteLine();
