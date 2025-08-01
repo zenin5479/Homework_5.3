@@ -496,6 +496,7 @@ namespace Homework_5._3
          return arrayDouble;
       }
 
+      // Заменить for на while
       public static double[,] InputArrayDouble(double[,] inputArray, int n, int m)
       {
          Console.WriteLine("Двумерный числовой массив для проведения поиска");
@@ -515,6 +516,7 @@ namespace Homework_5._3
          return outputArray;
       }
 
+      // Заменить for на while
       public static double[,] InputArrayDouble(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);
@@ -535,6 +537,7 @@ namespace Homework_5._3
          return outputArray;
       }
 
+      // Заменить for на while
       public static int[,] InputArrayInt(int[,] inputArray, int n, int m)
       {
          Console.WriteLine("Двумерный целочисленный массив:");
@@ -553,6 +556,7 @@ namespace Homework_5._3
          return outputArray;
       }
 
+      // Заменить for на while
       public static int[,] InputArrayInt(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный целочисленный массив {0}:", nameArray);
@@ -924,7 +928,7 @@ namespace Homework_5._3
          string subLine = null;
          int row = 0;
 
-         Console.BackgroundColor = ConsoleColor.Magenta;
+         //Console.BackgroundColor = ConsoleColor.Magenta;
          while (row < inputArray.GetLength(0))
          {
             int column = 0;
@@ -951,7 +955,7 @@ namespace Homework_5._3
             row++;
          }
 
-         Console.ResetColor();
+         //Console.ResetColor();
          return arrayString;
       }
 
