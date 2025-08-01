@@ -36,6 +36,9 @@ namespace Homework_5._3
             double[,] sortArray = BubbleSort(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
+            string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
+            VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+
             // Написать метод OutputStringDouble для двумерного массива double[,]
          }
 
@@ -124,6 +127,7 @@ namespace Homework_5._3
          }
       }
 
+      //
       static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
