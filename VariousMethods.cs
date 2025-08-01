@@ -84,7 +84,7 @@ namespace Homework_5._3
             //m = Convert.ToInt32(Console.ReadLine());
             if (m <= 0 || m > 20)
             {
-               Console.WriteLine("Введено не верное значение");
+               Console.WriteLine("Введено неверное значение");
             }
          } while (m <= 0 || m > 20);
 
@@ -364,16 +364,16 @@ namespace Homework_5._3
                {
                   while (countCharacter < line.Length)
                   {
-                     if (spaceCharacter != line[countCharacter])
-                     {
-                        stringModified.Append(line[countCharacter]);
-                     }
-                     else
+                     if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToDouble(subLine);
                         stringModified.Clear();
                         column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
                      }
 
                      if (countCharacter == line.Length - 1)
@@ -462,16 +462,16 @@ namespace Homework_5._3
                {
                   while (countCharacter < line.Length)
                   {
-                     if (spaceCharacter != line[countCharacter])
-                     {
-                        stringModified.Append(line[countCharacter]);
-                     }
-                     else
+                     if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToInt32(subLine);
                         stringModified.Clear();
                         column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
                      }
 
                      if (countCharacter == line.Length - 1)
