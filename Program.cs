@@ -43,6 +43,7 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static double[,] BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
@@ -94,6 +95,7 @@ namespace Homework_5._3
          return array;
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static void BubbleSort(double[] array)
       {
          Console.WriteLine("Пузырьковая сортировка одномерного числового массива");
@@ -116,6 +118,7 @@ namespace Homework_5._3
             i++;
          }
 
+         // Дописать отсутствие пробела за последним элементом строки
          int k = 0;
          while (k < array.GetLength(0))
          {
@@ -126,7 +129,8 @@ namespace Homework_5._3
          }
       }
 
-      //
+      // Дописать отсутствие пробела за последним элементом строки
+      // Заменить for на while
       static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
@@ -149,6 +153,7 @@ namespace Homework_5._3
             }
          }
 
+         // Дописать отсутствие пробела за последним элементом строки
          int l = 0;
          while (l < array.GetLength(0))
          {
@@ -166,6 +171,7 @@ namespace Homework_5._3
          }
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static void EnterArrayDouble(double[,] num)
       {
          Console.WriteLine("Двумерный числовой массив");
@@ -186,6 +192,7 @@ namespace Homework_5._3
          }
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static void EnterArrayDouble(double[] num)
       {
          Console.WriteLine("Одномерный числовой массив");
@@ -199,6 +206,7 @@ namespace Homework_5._3
          }
       }
 
+      // Заменить for на while
       public static double[] SumRowElements(double[,] array)
       {
          double[] inputArray = new double[array.GetLength(0)];
@@ -216,6 +224,7 @@ namespace Homework_5._3
          return inputArray;
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static int[] SortArray(int[] numArray)
       {
          int x = 0;
@@ -244,6 +253,7 @@ namespace Homework_5._3
          return numArray;
       }
 
+      // Дописать отсутствие пробела за последним элементом строки
       public static int[] SortOptimizedArray(int[] numArray)
       {
          int x = 0;
