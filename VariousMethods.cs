@@ -921,37 +921,38 @@ namespace Homework_5._3
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.Length];
-         int row = 0;
-         while (row < inputArray.Length)
-         {
-            stringModified.Append(inputArray[row]);
-            string subLine = stringModified.ToString();
-            arrayString[row] = subLine;
-            Console.WriteLine(subLine);
-            stringModified.Clear();
-            row++;
-         }
+         //int row = 0;
+         //while (row < inputArray.Length)
+         //{
+         //   stringModified.Append(inputArray[row]);
+         //   string subLine = stringModified.ToString();
+         //   arrayString[row] = subLine;
+         //   Console.WriteLine(subLine);
+         //   stringModified.Clear();
+         //   row++;
+         //}
 
-         int i = 0;
-         while (i < inputArray.GetLength(0))
+         int row = 0;
+         while (row < inputArray.GetLength(0))
          {
             int j = 0;
             while (j < inputArray.GetLength(1))
             {
-               if (min < 0 && inputArray[i, j] > min)
-               {
-                  min = inputArray[i, j];
-               }
+               stringModified.Append(inputArray[row]);
+               string subLine = stringModified.ToString();
+               arrayString[row] = subLine;
+               Console.WriteLine(subLine);
+               stringModified.Clear();
 
-               if (inputArray[i, j] > 0 && inputArray[i, j] < min)
-               {
-                  min = inputArray[i, j];
-               }
+               inputArray[row, j];
+              
+
+               
 
                j++;
             }
 
-            i++;
+            row++;
 
 
 

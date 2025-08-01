@@ -128,13 +128,13 @@ namespace Homework_5._3
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
          int rows = array.GetLength(0);
-         int cols = array.GetLength(1);
+         int columns = array.GetLength(1);
 
          for (int row = 0; row < rows; row++)
          {
-            for (int i = 0; i < cols - 1; i++)
+            for (int i = 0; i < columns - 1; i++)
             {
-               for (int j = 0; j < cols - i - 1; j++)
+               for (int j = 0; j < columns - i - 1; j++)
                {
                   if (array[row, j] > array[row, j + 1])
                   {
