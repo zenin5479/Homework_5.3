@@ -920,7 +920,7 @@ namespace Homework_5._3
          // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
-         string[] arrayString = new string[inputArray.Length];
+         string[] arrayString = new string[inputArray.GetLength(0)];
          int row = 0;
          while (row < inputArray.GetLength(0))
          {
@@ -936,11 +936,6 @@ namespace Homework_5._3
             }
 
             row++;
-
-
-
-
-
          }
 
          return arrayString;
