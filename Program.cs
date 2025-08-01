@@ -45,8 +45,6 @@ namespace Homework_5._3
       public static double[,] BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
-
-         Console.WriteLine("Двумерный числовой массив");
          int i = 0;
          while (i < data.Length)
          {
