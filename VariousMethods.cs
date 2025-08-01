@@ -928,12 +928,22 @@ namespace Homework_5._3
             int column = 0;
             while (column < inputArray.GetLength(1))
             {
-               stringModified.Append(inputArray[row, column] + " ");
-               subLine = stringModified.ToString();
-               arrayString[row] = subLine;
+               if (row != inputArray.GetLength(1) - 1)
+               {
+                  stringModified.Append(inputArray[row, column] + " ");
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
+               else
+               {
+                  stringModified.Append(inputArray[row, column]);
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
 
                column++;
             }
+
             Console.WriteLine(subLine);
             stringModified.Clear();
             row++;
