@@ -38,8 +38,6 @@ namespace Homework_5._3
             File.Create(pathFileInput).Close();
             string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
             VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
-
-            // Написать метод OutputStringDouble для двумерного массива double[,]
          }
 
          Console.ReadKey();
@@ -76,6 +74,7 @@ namespace Homework_5._3
             i++;
          }
 
+         // Дописать отсутствие пробела за последним элементом строки
          int l = 0;
          while (l < array.GetLength(0))
          {

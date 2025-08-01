@@ -159,17 +159,17 @@ namespace Homework_5._3
                {
                   while (countCharacter < line.Length)
                   {
-                     if (spaceCharacter != line[countCharacter])
-                     {
-                        stringModified.Append(line[countCharacter]);
-                     }
-                     else
+                     if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToDouble(subLine);
                         //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
                      }
 
                      if (countCharacter == line.Length - 1)
@@ -263,17 +263,17 @@ namespace Homework_5._3
                {
                   while (countCharacter < line.Length)
                   {
-                     if (spaceCharacter != line[countCharacter])
-                     {
-                        stringModified.Append(line[countCharacter]);
-                     }
-                     else
+                     if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
                         arrayDouble[row, column] = Convert.ToDouble(subLine);
                         //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
                      }
 
                      if (countCharacter == line.Length - 1)
