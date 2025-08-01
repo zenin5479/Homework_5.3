@@ -33,7 +33,7 @@ namespace Homework_5._3
             EnterArrayDouble(sumRow);
             Console.WriteLine();
 
-            double[,] inputAr = BubbleSort(inputArray, sumRow); // Вернуть двумерный массив double[,] 
+            double[,] sortArray = BubbleSort(inputArray, sumRow); // Вернуть двумерный массив double[,] 
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
             // Написать метод OutputStringDouble для двумерного массива double[,]
