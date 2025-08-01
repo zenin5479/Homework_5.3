@@ -922,19 +922,20 @@ namespace Homework_5._3
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
          int row = 0;
+         string subLine = null;
          while (row < inputArray.GetLength(0))
          {
             int column = 0;
             while (column < inputArray.GetLength(1))
             {
-               stringModified.Append(inputArray[row, column]);
-               string subLine = stringModified.ToString();
+               stringModified.Append(inputArray[row, column] + " ");
+               subLine = stringModified.ToString();
                arrayString[row] = subLine;
-               Console.WriteLine(subLine);
-               stringModified.Clear();
+
                column++;
             }
-
+            Console.WriteLine(subLine);
+            stringModified.Clear();
             row++;
          }
 
