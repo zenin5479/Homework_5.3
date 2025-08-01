@@ -923,6 +923,8 @@ namespace Homework_5._3
          string[] arrayString = new string[inputArray.GetLength(0)];
          string subLine = null;
          int row = 0;
+
+         Console.BackgroundColor = ConsoleColor.Magenta;
          while (row < inputArray.GetLength(0))
          {
             int column = 0;
@@ -949,6 +951,7 @@ namespace Homework_5._3
             row++;
          }
 
+         Console.ResetColor();
          return arrayString;
       }
 
