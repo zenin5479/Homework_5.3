@@ -42,7 +42,7 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      public static void BubbleSort(double[,] array, double[] data)
+      public static double[,] BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Двумерный числовой массив");
          int i = 0;
@@ -88,6 +88,8 @@ namespace Homework_5._3
             l++;
             Console.WriteLine();
          }
+
+         return array;
       }
 
       public static void BubbleSort(double[] array)
