@@ -876,13 +876,13 @@ namespace Homework_5._3
          int row = 0;
          while (row < inputArray.Length)
          {
-            if (row != inputArray.Length - 1)
+            if (row == inputArray.Length - 1)
             {
-               stringModified.Append(inputArray[row] + " ");
+               stringModified.Append(inputArray[row]);
             }
             else
             {
-               stringModified.Append(inputArray[row]);
+               stringModified.Append(inputArray[row] + " ");
             }
 
             row++;
@@ -916,7 +916,7 @@ namespace Homework_5._3
 
       public static string[] OutputArrayString(double[,] inputArray)
       {
-         // Объединение одномерного массива double[]
+         // Объединение двумерного массива double[]
          // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
@@ -930,7 +930,7 @@ namespace Homework_5._3
             int column = 0;
             while (column < inputArray.GetLength(1))
             {
-               if (row == inputArray.GetLength(1) - 1)
+               if (column == inputArray.GetLength(1) - 1)
                {
                   stringModified.Append(inputArray[row, column]);
                   subLine = stringModified.ToString();
