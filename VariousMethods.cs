@@ -921,35 +921,18 @@ namespace Homework_5._3
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.Length];
-         //int row = 0;
-         //while (row < inputArray.Length)
-         //{
-         //   stringModified.Append(inputArray[row]);
-         //   string subLine = stringModified.ToString();
-         //   arrayString[row] = subLine;
-         //   Console.WriteLine(subLine);
-         //   stringModified.Clear();
-         //   row++;
-         //}
-
          int row = 0;
          while (row < inputArray.GetLength(0))
          {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
+            int column = 0;
+            while (column < inputArray.GetLength(1))
             {
-               stringModified.Append(inputArray[row]);
+               stringModified.Append(inputArray[row, column]);
                string subLine = stringModified.ToString();
                arrayString[row] = subLine;
                Console.WriteLine(subLine);
                stringModified.Clear();
-
-               inputArray[row, j];
-              
-
-               
-
-               j++;
+               column++;
             }
 
             row++;
@@ -957,7 +940,10 @@ namespace Homework_5._3
 
 
 
-            return arrayString;
+
+         }
+
+         return arrayString;
       }
 
       public static void FileWriteArrayString(string[] arrayString, string nameFile)
