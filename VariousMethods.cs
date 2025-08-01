@@ -16,7 +16,7 @@ namespace Homework_5._3
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)
             {
-               Console.WriteLine("Введено не верное значение");
+               Console.WriteLine("Введено неверное значение");
             }
          } while (n <= 0 || n > 20);
 
@@ -33,7 +33,7 @@ namespace Homework_5._3
             //m = Convert.ToInt32(Console.ReadLine());
             if (m <= 0 || m > 20)
             {
-               Console.WriteLine("Введено не верное значение");
+               Console.WriteLine("Введено неверное значение");
             }
          } while (m <= 0 || m > 20);
 
@@ -50,7 +50,7 @@ namespace Homework_5._3
             //multiple = Convert.ToInt32(Console.ReadLine());
             if (multiple <= 0 || multiple > 99)
             {
-               Console.WriteLine("Введено не верное значение");
+               Console.WriteLine("Введено неверное значение");
             }
          } while (multiple <= 0 || multiple > 99);
 
@@ -67,7 +67,7 @@ namespace Homework_5._3
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)
             {
-               Console.WriteLine("Введено не верное значение");
+               Console.WriteLine("Введено неверное значение");
             }
          } while (n <= 0 || n > 20);
 
