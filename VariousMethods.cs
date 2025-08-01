@@ -914,6 +914,51 @@ namespace Homework_5._3
          return arrayString;
       }
 
+      public static string[] OutputArrayString(double[,] inputArray)
+      {
+         // Объединение одномерного массива double[]
+         // в одномерный массив строк string[] для записи в файл
+         Console.WriteLine("Одномерный массив строк");
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[inputArray.Length];
+         int row = 0;
+         while (row < inputArray.Length)
+         {
+            stringModified.Append(inputArray[row]);
+            string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
+            Console.WriteLine(subLine);
+            stringModified.Clear();
+            row++;
+         }
+
+         int i = 0;
+         while (i < inputArray.GetLength(0))
+         {
+            int j = 0;
+            while (j < inputArray.GetLength(1))
+            {
+               if (min < 0 && inputArray[i, j] > min)
+               {
+                  min = inputArray[i, j];
+               }
+
+               if (inputArray[i, j] > 0 && inputArray[i, j] < min)
+               {
+                  min = inputArray[i, j];
+               }
+
+               j++;
+            }
+
+            i++;
+
+
+
+
+            return arrayString;
+      }
+
       public static void FileWriteArrayString(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
