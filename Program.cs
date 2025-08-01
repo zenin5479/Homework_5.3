@@ -131,7 +131,7 @@ namespace Homework_5._3
 
       // Дописать отсутствие пробела за последним элементом строки
       // Заменить for на while
-      static void BubbleSortColumns(double[,] array)
+      public static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
          int rows = array.GetLength(0);
