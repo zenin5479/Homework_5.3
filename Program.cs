@@ -134,19 +134,18 @@ namespace Homework_5._3
                //Console.Write(array[k]);
                Console.Write("{0:f}", array[k]);
                //Console.Write("{0:f2}", array[k]);
-               k++;
             }
             else
             {
                //Console.Write(array[k] + " ");
                Console.Write("{0:f} ", array[k]);
                //Console.Write("{0:f2} ", array[k]);
-               k++;
             }
+
+            k++;
          }
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       // Заменить for на while
       public static void BubbleSortColumns(double[,] array)
       {
@@ -177,9 +176,19 @@ namespace Homework_5._3
             int m = 0;
             while (m < array.GetLength(1))
             {
-               Console.Write(array[l, m] + " ");
-               //Console.Write("{0:f} ", array[l, m]);
-               //Console.Write("{0:f2} ", array[l, m]);
+               if (m == array.GetLength(1) - 1)
+               {
+                  Console.Write(array[l, m]);
+                  //Console.Write("{0:f}", array[l, m]);
+                  //Console.Write("{0:f2}", array[l, m]);
+               }
+               else
+               {
+                  Console.Write(array[l, m] + " ");
+                  //Console.Write("{0:f} ", array[l, m]);
+                  //Console.Write("{0:f2} ", array[l, m]);
+               }
+
                m++;
             }
 
