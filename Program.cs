@@ -43,7 +43,6 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       public static double[,] BubbleSort(double[,] array, double[] data)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
@@ -75,8 +74,6 @@ namespace Homework_5._3
             i++;
          }
 
-         // Дописать отсутствие пробела за последним элементом строки
-         //Console.BackgroundColor = ConsoleColor.Magenta;
          int l = 0;
          while (l < array.GetLength(0))
          {
@@ -103,7 +100,6 @@ namespace Homework_5._3
             Console.WriteLine();
          }
 
-         //Console.ResetColor();
          return array;
       }
 
