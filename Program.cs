@@ -126,7 +126,6 @@ namespace Homework_5._3
             i++;
          }
 
-         Console.BackgroundColor = ConsoleColor.Magenta;
          int k = 0;
          while (k < array.Length)
          {
@@ -145,8 +144,6 @@ namespace Homework_5._3
                k++;
             }
          }
-
-         Console.ResetColor();
       }
 
       // Дописать отсутствие пробела за последним элементом строки
