@@ -169,7 +169,6 @@ namespace Homework_5._3
             }
          }
 
-         // Дописать отсутствие пробела за последним элементом строки
          int l = 0;
          while (l < array.GetLength(0))
          {
