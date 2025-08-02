@@ -30,7 +30,8 @@ namespace Homework_5._3
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
             double[] sumRow = SumRowElements(inputArray);
-            EnterArrayDouble(sumRow);
+            BubbleSort(sumRow);
+            //EnterArrayDouble(sumRow);
             Console.WriteLine();
 
             double[,] sortArray = BubbleSort(inputArray, sumRow);
@@ -103,10 +104,10 @@ namespace Homework_5._3
          return array;
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       public static void BubbleSort(double[] array)
       {
          Console.WriteLine("Пузырьковая сортировка одномерного числового массива");
+
          int i = 0;
          while (i < array.Length)
          {
@@ -126,11 +127,11 @@ namespace Homework_5._3
             i++;
          }
 
-         // Дописать отсутствие пробела за последним элементом строки
+         Console.BackgroundColor = ConsoleColor.Magenta;
          int k = 0;
-         while (k < array.GetLength(0))
+         while (k < array.Length)
          {
-            if (k == array.GetLength(1) - 1)
+            if (k == array.Length - 1)
             {
                //Console.Write(array[k]);
                Console.Write("{0:f}", array[k]);
@@ -145,6 +146,8 @@ namespace Homework_5._3
                k++;
             }
          }
+
+         Console.ResetColor();
       }
 
       // Дописать отсутствие пробела за последним элементом строки
