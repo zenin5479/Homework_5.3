@@ -107,7 +107,6 @@ namespace Homework_5._3
       public static void BubbleSort(double[] array)
       {
          Console.WriteLine("Пузырьковая сортировка одномерного числового массива");
-
          int i = 0;
          while (i < array.Length)
          {
