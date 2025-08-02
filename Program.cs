@@ -130,10 +130,27 @@ namespace Homework_5._3
          int k = 0;
          while (k < array.GetLength(0))
          {
-            //Console.Write(array[k] + " ");
-            Console.Write("{0:f} ", array[k]);
-            //Console.Write("{0:f2} ", array[k]);
-            k++;
+
+            if (k == array.GetLength(1) - 1)
+            {
+               //Console.Write(array[k] + " ");
+               Console.Write("{0:f} ", array[k]);
+               //Console.Write("{0:f2} ", array[k]);
+               k++;
+            }
+            else
+            {
+               //Console.Write(array[k] + " ");
+               Console.Write("{0:f} ", array[k]);
+               //Console.Write("{0:f2} ", array[k]);
+               k++;
+            }
+
+
+
+
+
+
          }
       }
 
