@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Common;
 using System.IO;
 
 // Разработка программ с самостоятельным выделением подзадач
@@ -103,7 +102,7 @@ namespace Homework_5._3
             l++;
             Console.WriteLine();
          }
-         
+
          Console.ResetColor();
          return array;
       }
