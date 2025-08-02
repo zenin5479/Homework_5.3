@@ -82,6 +82,12 @@ namespace Homework_5._3
             int m = 0;
             while (m < array.GetLength(1))
             {
+               
+               
+               
+               
+               
+               
                Console.Write(array[l, m] + " ");
                //Console.Write("{0:f} ", array[l, m]);
                //Console.Write("{0:f2} ", array[l, m]);
