@@ -77,6 +77,7 @@ namespace Homework_5._3
          }
 
          // Дописать отсутствие пробела за последним элементом строки
+         Console.BackgroundColor = ConsoleColor.Magenta;
          int l = 0;
          while (l < array.GetLength(0))
          {
@@ -102,7 +103,8 @@ namespace Homework_5._3
             l++;
             Console.WriteLine();
          }
-
+         
+         Console.ResetColor();
          return array;
       }
 
