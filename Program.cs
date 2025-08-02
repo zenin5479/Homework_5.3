@@ -214,7 +214,7 @@ namespace Homework_5._3
          }
       }
 
-      // Заменить for на while
+      // Заменить for на while. Дописать вывод массива
       public static double[] SumRowElements(double[,] array)
       {
          double[] inputArray = new double[array.GetLength(0)];
