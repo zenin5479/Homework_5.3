@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Common;
 using System.IO;
 
 // Разработка программ с самостоятельным выделением подзадач
@@ -82,12 +83,23 @@ namespace Homework_5._3
             int m = 0;
             while (m < array.GetLength(1))
             {
-               
-               
-               
-               
-               
-               
+               if (column == inputArray.GetLength(1) - 1)
+               {
+                  stringModified.Append(inputArray[row, column]);
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
+               else
+               {
+                  stringModified.Append(inputArray[row, column] + " ");
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
+
+
+
+
+
                Console.Write(array[l, m] + " ");
                //Console.Write("{0:f} ", array[l, m]);
                //Console.Write("{0:f2} ", array[l, m]);
