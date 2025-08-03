@@ -525,16 +525,20 @@ namespace Homework_5._3
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);
          double[,] outputArray = new double[n, m];
-         for (int i = 0; i < n; i++)
+         int i = 0;
+         while (i < n)
          {
-            for (int j = 0; j < m; j++)
+            int j = 0;
+            while (j < m)
             {
                outputArray[i, j] = inputArray[i, j];
                Console.Write("{0} ", outputArray[i, j]);
                //Console.Write("{0:f2} ", outputArray[i, j]);
                //Console.Write("{0:f} ", outputArray[i, j]);
+               j++;
             }
 
+            i++;
             Console.WriteLine();
          }
 
