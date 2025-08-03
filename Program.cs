@@ -267,8 +267,29 @@ namespace Homework_5._3
 
             sumArray[i] = sum;
          }
+         
+         int k = 0;
+         while (k < sumArray.Length)
+         {
+            if (k == sumArray.Length - 1)
+            {
+               Console.Write(sumArray[k]);
+               Console.Write("{0:f}", sumArray[k]);
+               Console.Write("{0:f2}", sumArray[k]);
+            }
+            else
+            {
+               Console.Write(sumArray[k] + " ");
+               Console.Write("{0:f} ", sumArray[k]);
+               Console.Write("{0:f2} ", sumArray[k]);
+            }
+
+            k++;
+         }
+
 
          return sumArray;
+
       }
 
       // Дописать отсутствие пробела за последним элементом строки
