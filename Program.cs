@@ -44,7 +44,7 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      public static double[,] BubbleSort(double[,] array, double[] data)
+      public static double[,] BubbleSort(double[,] inputArray, double[] data)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
@@ -60,11 +60,11 @@ namespace Homework_5._3
                   data[j] = tеmpData;
 
                   int k = 0;
-                  while (k < array.GetLength(1))
+                  while (k < inputArray.GetLength(1))
                   {
-                     double tempArray = array[i, k];
-                     array[i, k] = array[j, k];
-                     array[j, k] = tempArray;
+                     double tempArray = inputArray[i, k];
+                     inputArray[i, k] = inputArray[j, k];
+                     inputArray[j, k] = tempArray;
                      k++;
                   }
                }
@@ -76,22 +76,22 @@ namespace Homework_5._3
          }
 
          int l = 0;
-         while (l < array.GetLength(0))
+         while (l < inputArray.GetLength(0))
          {
             int m = 0;
-            while (m < array.GetLength(1))
+            while (m < inputArray.GetLength(1))
             {
-               if (m == array.GetLength(1) - 1)
+               if (m == inputArray.GetLength(1) - 1)
                {
-                  Console.Write(array[l, m]);
-                  //Console.Write("{0:f}", array[l, m]);
-                  //Console.Write("{0:f2}", array[l, m]);
+                  Console.Write(inputArray[l, m]);
+                  Console.Write("{0:f}", inputArray[l, m]);
+                  Console.Write("{0:f2}", inputArray[l, m]);
                }
                else
                {
-                  Console.Write(array[l, m] + " ");
-                  //Console.Write("{0:f} ", array[l, m]);
-                  //Console.Write("{0:f2} ", array[l, m]);
+                  Console.Write(inputArray[l, m] + " ");
+                  Console.Write("{0:f} ", inputArray[l, m]);
+                  Console.Write("{0:f2} ", inputArray[l, m]);
                }
 
                m++;
@@ -101,7 +101,7 @@ namespace Homework_5._3
             Console.WriteLine();
          }
 
-         return array;
+         return inputArray;
       }
 
       public static void BubbleSort(double[] inputArray)
