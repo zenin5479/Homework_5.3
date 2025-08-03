@@ -201,7 +201,6 @@ namespace Homework_5._3
          }
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       public static void EnterArrayDouble(double[,] array)
       {
          Console.WriteLine("Двумерный числовой массив");
