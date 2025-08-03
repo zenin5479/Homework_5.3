@@ -257,17 +257,22 @@ namespace Homework_5._3
       public static double[] SumRowElements(double[,] inputArray)
       {
          double[] sumArray = new double[inputArray.GetLength(0)];
-         for (int i = 0; i < inputArray.GetLength(0); i++)
+         int i = 0;
+         while (i < inputArray.GetLength(0))
          {
             double sum = 0;
-            for (int j = 0; j < inputArray.GetLength(1); j++)
+            int j = 0;
+            while (j < inputArray.GetLength(1))
             {
                sum += inputArray[i, j];
+               j++;
             }
 
             sumArray[i] = sum;
+
+            i++;
          }
-         
+
          int k = 0;
          while (k < sumArray.Length)
          {
