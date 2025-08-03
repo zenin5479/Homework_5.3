@@ -39,7 +39,10 @@ namespace Homework_5._3
             File.Create(pathFileInput).Close();
             string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
             VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+            BubbleSortColumns(sortArray);
          }
+
+
 
          Console.ReadKey();
       }
@@ -150,8 +153,6 @@ namespace Homework_5._3
       public static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
-         
-        
          int row = 0;
          while (row < array.GetLength(0))
          {
