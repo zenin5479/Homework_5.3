@@ -240,9 +240,9 @@ namespace Homework_5._3
          {
             if (i == array.Length - 1)
             {
-               Console.Write(array[i] + " ");
-               Console.Write("{0:f} ", array[i]);
-               Console.Write("{0:f2} ", array[i]);
+               Console.Write(array[i]);
+               Console.Write("{0:f}", array[i]);
+               Console.Write("{0:f2}", array[i]);
             }
             else
             {
