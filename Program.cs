@@ -146,23 +146,23 @@ namespace Homework_5._3
          }
       }
 
-      public static void BubbleSortColumns(double[,] array)
+      public static void BubbleSortColumns(double[,] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
          int row = 0;
-         while (row < array.GetLength(0))
+         while (row < inputArray.GetLength(0))
          {
             int i = 0;
-            while (i < array.GetLength(1) - 1)
+            while (i < inputArray.GetLength(1) - 1)
             {
                int j = 0;
-               while (j < array.GetLength(1) - i - 1)
+               while (j < inputArray.GetLength(1) - i - 1)
                {
-                  if (array[row, j] > array[row, j + 1])
+                  if (inputArray[row, j] > inputArray[row, j + 1])
                   {
-                     double temp = array[row, j];
-                     array[row, j] = array[row, j + 1];
-                     array[row, j + 1] = temp;
+                     double temp = inputArray[row, j];
+                     inputArray[row, j] = inputArray[row, j + 1];
+                     inputArray[row, j + 1] = temp;
                   }
 
                   j++;
@@ -175,22 +175,22 @@ namespace Homework_5._3
          }
 
          int l = 0;
-         while (l < array.GetLength(0))
+         while (l < inputArray.GetLength(0))
          {
             int m = 0;
-            while (m < array.GetLength(1))
+            while (m < inputArray.GetLength(1))
             {
-               if (m == array.GetLength(1) - 1)
+               if (m == inputArray.GetLength(1) - 1)
                {
-                  Console.Write(array[l, m]);
-                  //Console.Write("{0:f}", array[l, m]);
-                  //Console.Write("{0:f2}", array[l, m]);
+                  Console.Write(inputArray[l, m]);
+                  Console.Write("{0:f}", inputArray[l, m]);
+                  Console.Write("{0:f2}", inputArray[l, m]);
                }
                else
                {
-                  Console.Write(array[l, m] + " ");
-                  //Console.Write("{0:f} ", array[l, m]);
-                  //Console.Write("{0:f2} ", array[l, m]);
+                  Console.Write(inputArray[l, m] + " ");
+                  Console.Write("{0:f} ", inputArray[l, m]);
+                  Console.Write("{0:f2} ", inputArray[l, m]);
                }
 
                m++;
