@@ -273,21 +273,21 @@ namespace Homework_5._3
       }
 
       // Дописать отсутствие пробела за последним элементом строки
-      public static int[] SortArray(int[] numArray)
+      public static int[] SortArray(int[] inputArray)
       {
          int x = 0;
-         int n = numArray.Length;
+         int n = inputArray.Length;
          int i = 0;
          while (i < n - 1)
          {
             int j = 0;
             while (j < n - 1 - i)
             {
-               if (numArray[j] > numArray[j + 1])
+               if (inputArray[j] > inputArray[j + 1])
                {
-                  int tempVar = numArray[j];
-                  numArray[j] = numArray[j + 1];
-                  numArray[j + 1] = tempVar;
+                  int tempVar = inputArray[j];
+                  inputArray[j] = inputArray[j + 1];
+                  inputArray[j + 1] = tempVar;
                }
 
                x++;
@@ -298,7 +298,7 @@ namespace Homework_5._3
          }
 
          Console.WriteLine(x);
-         return numArray;
+         return inputArray;
       }
 
       // Дописать отсутствие пробела за последним элементом строки
