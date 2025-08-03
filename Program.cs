@@ -155,9 +155,11 @@ namespace Homework_5._3
          int row = 0;
          while (row < rows)
          {
-            
-            for (int i = 0; i < cols - 1; i++)
+            int i = 0;
+            while (i < cols - 1)
             {
+
+
                for (int j = 0; j < cols - i - 1; j++)
                {
                   if (array[row, j] > array[row, j + 1])
@@ -167,9 +169,10 @@ namespace Homework_5._3
                      array[row, j + 1] = temp;
                   }
                }
+
+               i++;
             }
-            
-            
+
             row++;
          }
 
