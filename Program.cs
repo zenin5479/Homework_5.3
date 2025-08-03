@@ -168,9 +168,6 @@ namespace Homework_5._3
                      array[row, j + 1] = temp;
                   }
 
-
-
-
                   j++;
                }
 
