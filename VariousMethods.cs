@@ -520,7 +520,6 @@ namespace Homework_5._3
          return outputArray;
       }
 
-      // Заменить for на while
       public static double[,] InputArrayDouble(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);
@@ -550,14 +549,18 @@ namespace Homework_5._3
       {
          Console.WriteLine("Двумерный целочисленный массив:");
          int[,] outputArray = new int[n, m];
-         for (int i = 0; i < n; i++)
+         int i = 0;
+         while (i < n)
          {
-            for (int j = 0; j < m; j++)
+            int j = 0;
+            while (j < m)
             {
                outputArray[i, j] = inputArray[i, j];
                Console.Write("{0} ", outputArray[i, j]);
+               j++;
             }
 
+            i++;
             Console.WriteLine();
          }
 
