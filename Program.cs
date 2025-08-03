@@ -224,10 +224,7 @@ namespace Homework_5._3
                   Console.Write("{0:f2} ", array[i, j]);
                }
 
-
-
                j++;
-
             }
 
             i++;
