@@ -151,7 +151,7 @@ namespace Homework_5._3
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
          
-         array.GetLength(1);
+        
          int row = 0;
          while (row < array.GetLength(0))
          {
