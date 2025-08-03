@@ -255,21 +255,21 @@ namespace Homework_5._3
       }
 
       // Заменить for на while. Дописать вывод массива
-      public static double[] SumRowElements(double[,] array)
+      public static double[] SumRowElements(double[,] inputArray)
       {
-         double[] inputArray = new double[array.GetLength(0)];
-         for (int i = 0; i < array.GetLength(0); i++)
+         double[] sumArray = new double[inputArray.GetLength(0)];
+         for (int i = 0; i < inputArray.GetLength(0); i++)
          {
             double sum = 0;
-            for (int j = 0; j < array.GetLength(1); j++)
+            for (int j = 0; j < inputArray.GetLength(1); j++)
             {
-               sum += array[i, j];
+               sum += inputArray[i, j];
             }
 
-            inputArray[i] = sum;
+            sumArray[i] = sum;
          }
 
-         return inputArray;
+         return sumArray;
       }
 
       // Дописать отсутствие пробела за последним элементом строки
