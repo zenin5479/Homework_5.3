@@ -152,9 +152,10 @@ namespace Homework_5._3
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
          int rows = array.GetLength(0);
          int cols = array.GetLength(1);
-
-         for (int row = 0; row < rows; row++)
+         int row = 0;
+         while (row < rows)
          {
+            
             for (int i = 0; i < cols - 1; i++)
             {
                for (int j = 0; j < cols - i - 1; j++)
@@ -167,6 +168,9 @@ namespace Homework_5._3
                   }
                }
             }
+            
+            
+            row++;
          }
 
          int l = 0;
