@@ -39,7 +39,6 @@ namespace Homework_5._3
             File.Create(pathFileInput).Close();
             string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
             VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
-            BubbleSortColumns(sortArray);
          }
 
          Console.ReadKey();
