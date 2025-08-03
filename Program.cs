@@ -253,7 +253,6 @@ namespace Homework_5._3
          }
       }
 
-      // Заменить for на while. Дописать вывод массива
       public static double[] SumRowElements(double[,] inputArray)
       {
          double[] sumArray = new double[inputArray.GetLength(0)];
@@ -295,10 +294,8 @@ namespace Homework_5._3
          return sumArray;
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       public static int[] SortArray(int[] inputArray)
       {
-         int x = 0;
          int n = inputArray.Length;
          int i = 0;
          while (i < n - 1)
@@ -313,22 +310,32 @@ namespace Homework_5._3
                   inputArray[j + 1] = tempVar;
                }
 
-               x++;
                j++;
             }
 
             i++;
          }
 
-         Console.WriteLine(x);
+         int k = 0;
+         while (k < inputArray.Length)
+         {
+            if (k == inputArray.Length - 1)
+            {
+               Console.Write(inputArray[k]);
+            }
+            else
+            {
+               Console.Write(inputArray[k] + " ");
+            }
+
+            k++;
+         }
+
          return inputArray;
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
       public static int[] SortOptimizedArray(int[] inputArray)
       {
-         int x = 0;
-         int y = 0;
          int n = inputArray.Length;
          int i = 0;
          while (i < n - 1)
@@ -345,20 +352,32 @@ namespace Homework_5._3
                   swapRequired = true;
                }
 
-               x++;
                j++;
             }
 
             if (swapRequired == false)
             {
-               y++;
                break;
             }
 
             i++;
          }
 
-         Console.WriteLine(x + ", " + y);
+         int k = 0;
+         while (k < inputArray.Length)
+         {
+            if (k == inputArray.Length - 1)
+            {
+               Console.Write(inputArray[k]);
+            }
+            else
+            {
+               Console.Write(inputArray[k] + " ");
+            }
+
+            k++;
+         }
+
          return inputArray;
       }
    }
