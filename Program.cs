@@ -211,19 +211,17 @@ namespace Homework_5._3
             int j = 0;
             while (j < array.GetLength(1))
             {
-               if (m == array.GetLength(1) - 1)
+               if (j == array.GetLength(1) - 1)
                {
-                  Console.Write(array[i, j] + " ");
-                  //Console.Write("{0:f} ", num[i, j]);
-                  //Console.Write("{0:f2} ", num[i, j]);
-                  j++;
+                  Console.Write(array[i, j]);
+                  Console.Write("{0:f}", array[i, j]);
+                  Console.Write("{0:f2}", array[i, j]);
                }
                else
                {
                   Console.Write(array[i, j] + " ");
-                  //Console.Write("{0:f} ", num[i, j]);
-                  //Console.Write("{0:f2} ", num[i, j]);
-
+                  Console.Write("{0:f} ", array[i, j]);
+                  Console.Write("{0:f2} ", array[i, j]);
                }
 
 
