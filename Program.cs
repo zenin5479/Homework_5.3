@@ -158,7 +158,6 @@ namespace Homework_5._3
             int i = 0;
             while (i < cols - 1)
             {
-
                int j = 0;
                while (j < cols - i - 1)
                {
