@@ -220,8 +220,8 @@ namespace Homework_5._3
                else
                {
                   Console.Write(array[i, j] + " ");
-                  Console.Write("{0:f} ", array[i, j]);
-                  Console.Write("{0:f2} ", array[i, j]);
+                  //Console.Write("{0:f} ", array[i, j]);
+                  //Console.Write("{0:f2} ", array[i, j]);
                }
 
                j++;
