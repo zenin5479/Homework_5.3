@@ -104,20 +104,20 @@ namespace Homework_5._3
          return array;
       }
 
-      public static void BubbleSort(double[] array)
+      public static void BubbleSort(double[] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка одномерного числового массива");
          int i = 0;
-         while (i < array.Length)
+         while (i < inputArray.Length)
          {
             int j = i + 1;
-            while (j < array.Length)
+            while (j < inputArray.Length)
             {
-               if (array[i] < array[j])
+               if (inputArray[i] < inputArray[j])
                {
-                  double tmp = array[i];
-                  array[i] = array[j];
-                  array[j] = tmp;
+                  double tmp = inputArray[i];
+                  inputArray[i] = inputArray[j];
+                  inputArray[j] = tmp;
                }
 
                j++;
@@ -127,19 +127,19 @@ namespace Homework_5._3
          }
 
          int k = 0;
-         while (k < array.Length)
+         while (k < inputArray.Length)
          {
-            if (k == array.Length - 1)
+            if (k == inputArray.Length - 1)
             {
-               //Console.Write(array[k]);
-               Console.Write("{0:f}", array[k]);
-               //Console.Write("{0:f2}", array[k]);
+               //Console.Write(inputArray[k]);
+               Console.Write("{0:f}", inputArray[k]);
+               //Console.Write("{0:f2}", inputArray[k]);
             }
             else
             {
-               //Console.Write(array[k] + " ");
-               Console.Write("{0:f} ", array[k]);
-               //Console.Write("{0:f2} ", array[k]);
+               //Console.Write(inputArray[k] + " ");
+               Console.Write("{0:f} ", inputArray[k]);
+               //Console.Write("{0:f2} ", inputArray[k]);
             }
 
             k++;
