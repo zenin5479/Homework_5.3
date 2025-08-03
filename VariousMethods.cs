@@ -496,7 +496,6 @@ namespace Homework_5._3
          return arrayDouble;
       }
 
-      // Заменить for на while
       public static double[,] InputArrayDouble(double[,] inputArray, int n, int m)
       {
          Console.WriteLine("Двумерный числовой массив для проведения поиска");
