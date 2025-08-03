@@ -214,8 +214,8 @@ namespace Homework_5._3
                if (j == array.GetLength(1) - 1)
                {
                   Console.Write(array[i, j]);
-                  Console.Write("{0:f}", array[i, j]);
-                  Console.Write("{0:f2}", array[i, j]);
+                  //Console.Write("{0:f}", array[i, j]);
+                  //Console.Write("{0:f2}", array[i, j]);
                }
                else
                {
