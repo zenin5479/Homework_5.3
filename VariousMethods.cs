@@ -501,7 +501,6 @@ namespace Homework_5._3
       {
          Console.WriteLine("Двумерный числовой массив для проведения поиска");
          double[,] outputArray = new double[n, m];
-
          int i = 0;
          while (i < n)
          {
@@ -512,7 +511,6 @@ namespace Homework_5._3
                //Console.Write("{0:f2} ", outputArray[i, j]);
                //Console.Write("{0:f} ", outputArray[i, j]);
                Console.Write("{0} ", outputArray[i, j]);
-
                j++;
             }
 
