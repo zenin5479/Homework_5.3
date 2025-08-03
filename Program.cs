@@ -42,8 +42,6 @@ namespace Homework_5._3
             BubbleSortColumns(sortArray);
          }
 
-
-
          Console.ReadKey();
       }
 
@@ -149,7 +147,6 @@ namespace Homework_5._3
          }
       }
 
-      // Заменить for на while
       public static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
