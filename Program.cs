@@ -201,26 +201,26 @@ namespace Homework_5._3
          }
       }
 
-      public static void EnterArrayDouble(double[,] array)
+      public static void EnterArrayDouble(double[,] inputArray)
       {
          Console.WriteLine("Двумерный числовой массив");
          int i = 0;
-         while (i < array.GetLength(0))
+         while (i < inputArray.GetLength(0))
          {
             int j = 0;
-            while (j < array.GetLength(1))
+            while (j < inputArray.GetLength(1))
             {
-               if (j == array.GetLength(1) - 1)
+               if (j == inputArray.GetLength(1) - 1)
                {
-                  Console.Write(array[i, j]);
-                  //Console.Write("{0:f}", array[i, j]);
-                  //Console.Write("{0:f2}", array[i, j]);
+                  Console.Write(inputArray[i, j]);
+                  //Console.Write("{0:f}", inputArray[i, j]);
+                  //Console.Write("{0:f2}", inputArray[i, j]);
                }
                else
                {
-                  Console.Write(array[i, j] + " ");
-                  //Console.Write("{0:f} ", array[i, j]);
-                  //Console.Write("{0:f2} ", array[i, j]);
+                  Console.Write(inputArray[i, j] + " ");
+                  //Console.Write("{0:f} ", inputArray[i, j]);
+                  //Console.Write("{0:f2} ", inputArray[i, j]);
                }
 
                j++;
