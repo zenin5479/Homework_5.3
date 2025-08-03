@@ -202,19 +202,34 @@ namespace Homework_5._3
       }
 
       // Дописать отсутствие пробела за последним элементом строки
-      public static void EnterArrayDouble(double[,] num)
+      public static void EnterArrayDouble(double[,] array)
       {
          Console.WriteLine("Двумерный числовой массив");
          int i = 0;
-         while (i < num.GetLength(0))
+         while (i < array.GetLength(0))
          {
             int j = 0;
-            while (j < num.GetLength(1))
+            while (j < array.GetLength(1))
             {
-               Console.Write(num[i, j] + " ");
-               //Console.Write("{0:f} ", num[i, j]);
-               //Console.Write("{0:f2} ", num[i, j]);
+               if (m == array.GetLength(1) - 1)
+               {
+                  Console.Write(array[i, j] + " ");
+                  //Console.Write("{0:f} ", num[i, j]);
+                  //Console.Write("{0:f2} ", num[i, j]);
+                  j++;
+               }
+               else
+               {
+                  Console.Write(array[i, j] + " ");
+                  //Console.Write("{0:f} ", num[i, j]);
+                  //Console.Write("{0:f2} ", num[i, j]);
+
+               }
+
+
+
                j++;
+
             }
 
             i++;
