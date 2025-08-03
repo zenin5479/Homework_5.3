@@ -150,16 +150,16 @@ namespace Homework_5._3
       public static void BubbleSortColumns(double[,] array)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
-         int rows = array.GetLength(0);
-         int cols = array.GetLength(1);
+         
+         array.GetLength(1);
          int row = 0;
-         while (row < rows)
+         while (row < array.GetLength(0))
          {
             int i = 0;
-            while (i < cols - 1)
+            while (i < array.GetLength(1) - 1)
             {
                int j = 0;
-               while (j < cols - i - 1)
+               while (j < array.GetLength(1) - i - 1)
                {
                   if (array[row, j] > array[row, j + 1])
                   {
