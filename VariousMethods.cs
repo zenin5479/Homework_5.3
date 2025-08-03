@@ -566,7 +566,6 @@ namespace Homework_5._3
          return outputArray;
       }
 
-      // Заменить for на while
       public static int[,] InputArrayInt(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный целочисленный массив {0}:", nameArray);
