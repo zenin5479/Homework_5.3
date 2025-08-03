@@ -31,7 +31,6 @@ namespace Homework_5._3
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
             double[] sumRow = SumRowElements(inputArray);
             BubbleSort(sumRow);
-            //EnterArrayDouble(sumRow);
             Console.WriteLine();
 
             double[,] sortArray = BubbleSort(inputArray, sumRow);
@@ -83,15 +82,15 @@ namespace Homework_5._3
             {
                if (m == inputArray.GetLength(1) - 1)
                {
-                  Console.Write(inputArray[l, m]);
+                  //Console.Write(inputArray[l, m]);
                   Console.Write("{0:f}", inputArray[l, m]);
-                  Console.Write("{0:f2}", inputArray[l, m]);
+                  //Console.Write("{0:f2}", inputArray[l, m]);
                }
                else
                {
-                  Console.Write(inputArray[l, m] + " ");
+                  //Console.Write(inputArray[l, m] + " ");
                   Console.Write("{0:f} ", inputArray[l, m]);
-                  Console.Write("{0:f2} ", inputArray[l, m]);
+                  //Console.Write("{0:f2} ", inputArray[l, m]);
                }
 
                m++;
@@ -239,14 +238,14 @@ namespace Homework_5._3
          {
             if (i == inputArray.Length - 1)
             {
-               Console.Write(inputArray[i]);
-               //Console.Write("{0:f}", inputArray[i]);
+               //Console.Write(inputArray[i]);
+               Console.Write("{0:f}", inputArray[i]);
                //Console.Write("{0:f2}", inputArray[i]);
             }
             else
             {
-               Console.Write(inputArray[i] + " ");
-               //Console.Write("{0:f} ", inputArray[i]);
+               //Console.Write(inputArray[i] + " ");
+               Console.Write("{0:f} ", inputArray[i]);
                //Console.Write("{0:f2} ", inputArray[i]);
             }
 
