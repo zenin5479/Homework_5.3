@@ -231,24 +231,23 @@ namespace Homework_5._3
          }
       }
 
-      // Дописать отсутствие пробела за последним элементом строки
-      public static void EnterArrayDouble(double[] array)
+      public static void EnterArrayDouble(double[] inputArray)
       {
          Console.WriteLine("Одномерный числовой массив");
          int i = 0;
-         while (i < array.Length)
+         while (i < inputArray.Length)
          {
-            if (i == array.Length - 1)
+            if (i == inputArray.Length - 1)
             {
-               Console.Write(array[i]);
-               Console.Write("{0:f}", array[i]);
-               Console.Write("{0:f2}", array[i]);
+               Console.Write(inputArray[i]);
+               //Console.Write("{0:f}", inputArray[i]);
+               //Console.Write("{0:f2}", inputArray[i]);
             }
             else
             {
-               Console.Write(array[i] + " ");
-               Console.Write("{0:f} ", array[i]);
-               Console.Write("{0:f2} ", array[i]);
+               Console.Write(inputArray[i] + " ");
+               //Console.Write("{0:f} ", inputArray[i]);
+               //Console.Write("{0:f2} ", inputArray[i]);
             }
 
             i++;
