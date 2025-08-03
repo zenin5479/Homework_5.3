@@ -149,29 +149,29 @@ namespace Homework_5._3
       public static void BubbleSortColumns(double[,] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка по столбцам двумерного массива");
-         int row = 0;
-         while (row < inputArray.GetLength(0))
+         int i = 0;
+         while (i < inputArray.GetLength(0))
          {
-            int i = 0;
-            while (i < inputArray.GetLength(1) - 1)
+            int j = 0;
+            while (j < inputArray.GetLength(1) - 1)
             {
-               int j = 0;
-               while (j < inputArray.GetLength(1) - i - 1)
+               int k = 0;
+               while (k < inputArray.GetLength(1) - j - 1)
                {
-                  if (inputArray[row, j] > inputArray[row, j + 1])
+                  if (inputArray[i, k] > inputArray[i, k + 1])
                   {
-                     double temp = inputArray[row, j];
-                     inputArray[row, j] = inputArray[row, j + 1];
-                     inputArray[row, j + 1] = temp;
+                     double temp = inputArray[i, k];
+                     inputArray[i, k] = inputArray[i, k + 1];
+                     inputArray[i, k + 1] = temp;
                   }
 
-                  j++;
+                  k++;
                }
 
-               i++;
+               j++;
             }
 
-            row++;
+            i++;
          }
 
          int l = 0;
@@ -183,14 +183,14 @@ namespace Homework_5._3
                if (m == inputArray.GetLength(1) - 1)
                {
                   Console.Write(inputArray[l, m]);
-                  Console.Write("{0:f}", inputArray[l, m]);
-                  Console.Write("{0:f2}", inputArray[l, m]);
+                  //Console.Write("{0:f}", inputArray[l, m]);
+                  //Console.Write("{0:f2}", inputArray[l, m]);
                }
                else
                {
                   Console.Write(inputArray[l, m] + " ");
-                  Console.Write("{0:f} ", inputArray[l, m]);
-                  Console.Write("{0:f2} ", inputArray[l, m]);
+                  //Console.Write("{0:f} ", inputArray[l, m]);
+                  //Console.Write("{0:f2} ", inputArray[l, m]);
                }
 
                m++;
