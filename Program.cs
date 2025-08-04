@@ -30,7 +30,7 @@ namespace Homework_5._3
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
             double[] sumRow = SumRowElements(inputArray);
-            Console.WriteLine();
+            //Console.WriteLine();
             double[,] sortArray = BubbleSort(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
@@ -290,6 +290,7 @@ namespace Homework_5._3
             k++;
          }
 
+         Console.WriteLine();
          return sumArray;
       }
 
