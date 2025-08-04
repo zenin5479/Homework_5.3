@@ -40,7 +40,48 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      
+      public static double[] SumRowElements(double[,] inputArray)
+      {
+         Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
+         double[] sumArray = new double[inputArray.GetLength(0)];
+         int i = 0;
+         while (i < inputArray.GetLength(0))
+         {
+            double sum = 0;
+            int j = 0;
+            while (j < inputArray.GetLength(1))
+            {
+               sum += inputArray[i, j];
+               j++;
+            }
+
+            sumArray[i] = sum;
+
+            i++;
+         }
+
+         int k = 0;
+         while (k < sumArray.Length)
+         {
+            if (k == sumArray.Length - 1)
+            {
+               //Console.Write(sumArray[k]);
+               Console.Write("{0:f}", sumArray[k]);
+               //Console.Write("{0:f2}", sumArray[k]);
+            }
+            else
+            {
+               //Console.Write(sumArray[k] + " ");
+               Console.Write("{0:f} ", sumArray[k]);
+               //Console.Write("{0:f2} ", sumArray[k]);
+            }
+
+            k++;
+         }
+
+         Console.WriteLine();
+         return sumArray;
+      }
       
       public static double[,] BubbleSortArray(double[,] inputArray, double[] data)
       {
@@ -338,50 +379,5 @@ namespace Homework_5._3
             i++;
          }
       }
-
-      public static double[] SumRowElements(double[,] inputArray)
-      {
-         Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
-         double[] sumArray = new double[inputArray.GetLength(0)];
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            double sum = 0;
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               sum += inputArray[i, j];
-               j++;
-            }
-
-            sumArray[i] = sum;
-
-            i++;
-         }
-
-         int k = 0;
-         while (k < sumArray.Length)
-         {
-            if (k == sumArray.Length - 1)
-            {
-               //Console.Write(sumArray[k]);
-               Console.Write("{0:f}", sumArray[k]);
-               //Console.Write("{0:f2}", sumArray[k]);
-            }
-            else
-            {
-               //Console.Write(sumArray[k] + " ");
-               Console.Write("{0:f} ", sumArray[k]);
-               //Console.Write("{0:f2} ", sumArray[k]);
-            }
-
-            k++;
-         }
-
-         Console.WriteLine();
-         return sumArray;
-      }
-
-
    }
 }
