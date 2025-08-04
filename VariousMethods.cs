@@ -588,6 +588,59 @@ namespace Homework_5._3
          return outputArray;
       }
 
+      public static void PrintingArrayDouble(double[,] inputArray)
+      {
+         Console.WriteLine("Двумерный числовой массив");
+         int i = 0;
+         while (i < inputArray.GetLength(0))
+         {
+            int j = 0;
+            while (j < inputArray.GetLength(1))
+            {
+               if (j == inputArray.GetLength(1) - 1)
+               {
+                  Console.Write(inputArray[i, j]);
+                  //Console.Write("{0:f}", inputArray[i, j]);
+                  //Console.Write("{0:f2}", inputArray[i, j]);
+               }
+               else
+               {
+                  Console.Write(inputArray[i, j] + " ");
+                  //Console.Write("{0:f} ", inputArray[i, j]);
+                  //Console.Write("{0:f2} ", inputArray[i, j]);
+               }
+
+               j++;
+            }
+
+            i++;
+            Console.WriteLine();
+         }
+      }
+
+      public static void PrintingArrayDouble(double[] inputArray)
+      {
+         Console.WriteLine("Одномерный числовой массив");
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            if (i == inputArray.Length - 1)
+            {
+               //Console.Write(inputArray[i]);
+               Console.Write("{0:f}", inputArray[i]);
+               //Console.Write("{0:f2}", inputArray[i]);
+            }
+            else
+            {
+               //Console.Write(inputArray[i] + " ");
+               Console.Write("{0:f} ", inputArray[i]);
+               //Console.Write("{0:f2} ", inputArray[i]);
+            }
+
+            i++;
+         }
+      }
+
       public static double[] FindMaxDouble(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
