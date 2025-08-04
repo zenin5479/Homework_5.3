@@ -30,8 +30,7 @@ namespace Homework_5._3
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
             double[] sumRow = SumRowElements(inputArray);
-            //Console.WriteLine();
-            double[,] sortArray = BubbleSort(inputArray, sumRow);
+            double[,] sortArray = BubbleSortArray(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
             string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
@@ -41,7 +40,9 @@ namespace Homework_5._3
          Console.ReadKey();
       }
 
-      public static double[,] BubbleSort(double[,] inputArray, double[] data)
+      
+      
+      public static double[,] BubbleSortArray(double[,] inputArray, double[] data)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
@@ -101,7 +102,7 @@ namespace Homework_5._3
          return inputArray;
       }
 
-      public static void BubbleSort(double[] inputArray)
+      public static void BubbleSortArray(double[] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка одномерного числового массива");
          int i = 0;
@@ -141,6 +142,93 @@ namespace Homework_5._3
 
             k++;
          }
+      }
+
+      public static int[] BubbleSortArray(int[] inputArray)
+      {
+         int n = inputArray.Length;
+         int i = 0;
+         while (i < n - 1)
+         {
+            int j = 0;
+            while (j < n - 1 - i)
+            {
+               if (inputArray[j] > inputArray[j + 1])
+               {
+                  int tempVar = inputArray[j];
+                  inputArray[j] = inputArray[j + 1];
+                  inputArray[j + 1] = tempVar;
+               }
+
+               j++;
+            }
+
+            i++;
+         }
+
+         int k = 0;
+         while (k < inputArray.Length)
+         {
+            if (k == inputArray.Length - 1)
+            {
+               Console.Write(inputArray[k]);
+            }
+            else
+            {
+               Console.Write(inputArray[k] + " ");
+            }
+
+            k++;
+         }
+
+         return inputArray;
+      }
+
+      public static int[] BubbleSortArrayOptimized(int[] inputArray)
+      {
+         int n = inputArray.Length;
+         int i = 0;
+         while (i < n - 1)
+         {
+            bool swapRequired = false;
+            int j = 0;
+            while (j < n - 1 - i)
+            {
+               if (inputArray[j] > inputArray[j + 1])
+               {
+                  int tempVar = inputArray[j];
+                  inputArray[j] = inputArray[j + 1];
+                  inputArray[j + 1] = tempVar;
+                  swapRequired = true;
+               }
+
+               j++;
+            }
+
+            if (swapRequired == false)
+            {
+               break;
+            }
+
+            i++;
+         }
+
+         int k = 0;
+         while (k < inputArray.Length)
+         {
+            if (k == inputArray.Length - 1)
+            {
+               Console.Write(inputArray[k]);
+            }
+            else
+            {
+               Console.Write(inputArray[k] + " ");
+            }
+
+            k++;
+         }
+
+         return inputArray;
       }
 
       public static void BubbleSortColumns(double[,] inputArray)
@@ -198,7 +286,7 @@ namespace Homework_5._3
          }
       }
 
-      public static void EnterArrayDouble(double[,] inputArray)
+      public static void PrintingArrayDouble(double[,] inputArray)
       {
          Console.WriteLine("Двумерный числовой массив");
          int i = 0;
@@ -228,7 +316,7 @@ namespace Homework_5._3
          }
       }
 
-      public static void EnterArrayDouble(double[] inputArray)
+      public static void PrintingArrayDouble(double[] inputArray)
       {
          Console.WriteLine("Одномерный числовой массив");
          int i = 0;
@@ -294,91 +382,6 @@ namespace Homework_5._3
          return sumArray;
       }
 
-      public static int[] SortArray(int[] inputArray)
-      {
-         int n = inputArray.Length;
-         int i = 0;
-         while (i < n - 1)
-         {
-            int j = 0;
-            while (j < n - 1 - i)
-            {
-               if (inputArray[j] > inputArray[j + 1])
-               {
-                  int tempVar = inputArray[j];
-                  inputArray[j] = inputArray[j + 1];
-                  inputArray[j + 1] = tempVar;
-               }
 
-               j++;
-            }
-
-            i++;
-         }
-
-         int k = 0;
-         while (k < inputArray.Length)
-         {
-            if (k == inputArray.Length - 1)
-            {
-               Console.Write(inputArray[k]);
-            }
-            else
-            {
-               Console.Write(inputArray[k] + " ");
-            }
-
-            k++;
-         }
-
-         return inputArray;
-      }
-
-      public static int[] SortOptimizedArray(int[] inputArray)
-      {
-         int n = inputArray.Length;
-         int i = 0;
-         while (i < n - 1)
-         {
-            bool swapRequired = false;
-            int j = 0;
-            while (j < n - 1 - i)
-            {
-               if (inputArray[j] > inputArray[j + 1])
-               {
-                  int tempVar = inputArray[j];
-                  inputArray[j] = inputArray[j + 1];
-                  inputArray[j + 1] = tempVar;
-                  swapRequired = true;
-               }
-
-               j++;
-            }
-
-            if (swapRequired == false)
-            {
-               break;
-            }
-
-            i++;
-         }
-
-         int k = 0;
-         while (k < inputArray.Length)
-         {
-            if (k == inputArray.Length - 1)
-            {
-               Console.Write(inputArray[k]);
-            }
-            else
-            {
-               Console.Write(inputArray[k] + " ");
-            }
-
-            k++;
-         }
-
-         return inputArray;
-      }
    }
 }
