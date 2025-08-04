@@ -30,9 +30,9 @@ namespace Homework_5._3
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
             double[] sumRow = SumRowElements(inputArray);
+            Console.WriteLine();
             BubbleSort(sumRow);
             Console.WriteLine();
-
             double[,] sortArray = BubbleSort(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
