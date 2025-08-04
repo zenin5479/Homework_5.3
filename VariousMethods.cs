@@ -1275,7 +1275,7 @@ namespace Homework_5._3
       {
          // Объединение двумерного массива double[]
          // в одномерный массив строк string[] для записи в файл
-         Console.WriteLine("Одномерный массив строк");
+         //Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
          string subLine = null;
@@ -1301,7 +1301,7 @@ namespace Homework_5._3
                column++;
             }
 
-            Console.WriteLine(subLine);
+            //Console.WriteLine(subLine);
             stringModified.Clear();
             row++;
          }
