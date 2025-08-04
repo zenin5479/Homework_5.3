@@ -255,6 +255,7 @@ namespace Homework_5._3
 
       public static double[] SumRowElements(double[,] inputArray)
       {
+         Console.WriteLine("Одномерный массив сумм элементов строк двумерного массива");
          double[] sumArray = new double[inputArray.GetLength(0)];
          int i = 0;
          while (i < inputArray.GetLength(0))
