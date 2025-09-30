@@ -6,10 +6,4 @@
     <RootNamespace>Homework_5._3</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="LibraryFor2DArray">
-      <HintPath>LibraryFor2DArray.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

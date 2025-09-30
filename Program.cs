@@ -19,23 +19,23 @@ namespace Homework_5._3
       {
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
-         int row = VariousMethods.SizeRow();
-         int column = VariousMethods.SizeColumn();
+         int row = MethodsForArray.SizeRow();
+         int column = MethodsForArray.SizeColumn();
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
-         double[,] source = VariousMethods.EnterArrayDouble(row, column, pathFileEnter);
+         double[,] source = MethodsForArray.EnterArrayDouble(row, column, pathFileEnter);
          if (source.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter);
          }
          else
          {
-            double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
-            double[] sumRow = VariousMethods.SumRowElements(inputArray);
-            double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
+            double[,] inputArray = MethodsForArray.InputArrayDouble(source, row, column);
+            double[] sumRow = MethodsForArray.SumRowElements(inputArray);
+            double[,] sortArray = MethodsForArray.BubbleSortArray(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
-            string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
-            VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+            string[] arrayLines = MethodsForArray.OutputArrayString(sortArray);
+            MethodsForArray.FileWriteArrayString(arrayLines, nameFileInput);
          }
 
          Console.ReadKey();
