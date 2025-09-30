@@ -1278,7 +1278,7 @@ namespace Homework_5._3
          //Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
-         string subLine = null;
+         string subLine;
          int row = 0;
          while (row < inputArray.GetLength(0))
          {
