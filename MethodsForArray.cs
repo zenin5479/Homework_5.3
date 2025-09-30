@@ -270,7 +270,7 @@ namespace Homework_5._3
 
          return inputArray;
       }
-      
+
       public static string[] OutputArrayString(double[,] inputArray)
       {
          // Объединение двумерного массива double[]
