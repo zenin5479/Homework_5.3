@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LibraryFor2DArray;
+using System;
 using System.IO;
-using LibraryFor2DArray;
 
 // Разработка программ с самостоятельным выделением подзадач
 // Требуется выделить подзадачи, реализовать их решения подпрограммами, а затем собрать из них программу для решения всей задачи
@@ -15,7 +15,7 @@ namespace Homework_5._3
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
