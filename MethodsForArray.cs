@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace Homework_4._8
+namespace Homework_5._3
 {
    public class MethodsForArray
    {
