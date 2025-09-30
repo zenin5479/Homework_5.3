@@ -1,5 +1,4 @@
-﻿using LibraryFor2DArray;
-using System;
+﻿using System;
 using System.IO;
 
 // Разработка программ с самостоятельным выделением подзадач

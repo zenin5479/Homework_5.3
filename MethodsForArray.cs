@@ -91,24 +91,112 @@ namespace Homework_5._3
          return m;
       }
 
-      public static int SizeMatrix(string nameMatrix)
+      public static double[,] EnterArrayDouble(int n, int m)
       {
-         int n;
-         do
+         string filePath = AppContext.BaseDirectory + "a.txt";
+         // Двумерный массив вещественных чисел
+         double[,] arrayDouble = { };
+         // Чтение файла за одну операцию
+         string[] allLines = File.ReadAllLines(filePath);
+         if (allLines == null)
          {
-            Console.WriteLine("Введите размер матрицы {0}:", nameMatrix);
-            int.TryParse(Console.ReadLine(), out n);
-            //n = Convert.ToInt32(Console.ReadLine());
-            if (n <= 0 || n > 20)
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
+         else
+         {
+            //Console.WriteLine("Исходный массив строк");
+            int indexLines = 0;
+            while (indexLines < allLines.Length)
             {
-               Console.WriteLine("Введено неверное значение");
+               allLines[indexLines] = allLines[indexLines];
+               //Console.WriteLine(allLines[indexLines]);
+               indexLines++;
             }
-         } while (n <= 0 || n > 20);
 
-         return n;
+            // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
+            int[] sizeArray = new int[allLines.Length];
+            char symbolSpace = ' ';
+            int countRow = 0;
+            int countSymbol = 0;
+            int countСolumn = 0;
+            while (countRow < allLines.Length)
+            {
+               string line = allLines[countRow];
+               while (countSymbol < line.Length)
+               {
+                  if (symbolSpace == line[countSymbol])
+                  {
+                     countСolumn++;
+                  }
+
+                  if (countSymbol == line.Length - 1)
+                  {
+                     countСolumn++;
+                  }
+
+                  countSymbol++;
+               }
+
+               sizeArray[countRow] = countСolumn;
+               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               countСolumn = 0;
+               countRow++;
+               countSymbol = 0;
+            }
+
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+            //Console.WriteLine("Двухмерный числовой массив");
+            StringBuilder stringModified = new StringBuilder();
+            arrayDouble = new double[allLines.Length, sizeArray.Length];
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
+            while (row < arrayDouble.GetLength(0))
+            {
+               string line = allLines[row];
+               while (column < sizeArray[row])
+               {
+                  while (countCharacter < line.Length)
+                  {
+                     if (spaceCharacter == line[countCharacter])
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column] + " ");
+                        stringModified.Clear();
+                        column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
+                     }
+
+                     if (countCharacter == line.Length - 1)
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column]);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     countCharacter++;
+                  }
+
+                  countCharacter = 0;
+               }
+
+               //Console.WriteLine();
+               column = 0;
+               row++;
+            }
+         }
+
+         return arrayDouble;
       }
 
-      public static double[,] EnterArrayDouble(string path)
+      public static double[,] EnterArrayDouble(int n, int m, string path)
       {
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
@@ -410,37 +498,13 @@ namespace Homework_5._3
 
       public static double[,] InputArrayDouble(double[,] inputArray, int n, int m)
       {
-         Console.WriteLine("Двумерный массив вещественных чисел");
+         Console.WriteLine("Двумерный числовой массив для проведения поиска");
          double[,] outputArray = new double[n, m];
          int i = 0;
          while (i < n)
          {
             int j = 0;
             while (j < m)
-            {
-               outputArray[i, j] = inputArray[i, j];
-               //Console.Write("{0:f2} ", outputArray[i, j]);
-               //Console.Write("{0:f} ", outputArray[i, j]);
-               Console.Write("{0} ", outputArray[i, j]);
-               j++;
-            }
-
-            i++;
-            Console.WriteLine();
-         }
-
-         return outputArray;
-      }
-
-      public static double[,] InputMatrixDouble(double[,] inputArray, int n, string nameArray)
-      {
-         Console.WriteLine("Двумерный массив (матрица) вещественных чисел {0}:", nameArray);
-         double[,] outputArray = new double[n, n];
-         int i = 0;
-         while (i < n)
-         {
-            int j = 0;
-            while (j < n)
             {
                outputArray[i, j] = inputArray[i, j];
                //Console.Write("{0:f2} ", outputArray[i, j]);
@@ -864,47 +928,6 @@ namespace Homework_5._3
          }
       }
 
-      public static double[,] SwapLastLine(double[,] inputArray)
-      {
-         Console.WriteLine("Замена первой строки двумерного массива последней");
-         int i = 0;
-         int j = inputArray.GetLength(0) - 1;
-         int k = 0;
-         while (k < inputArray.GetLength(1))
-         {
-            inputArray[i, k] = inputArray[j, k];
-            k++;
-         }
-
-         int l = 0;
-         while (l < inputArray.GetLength(0))
-         {
-            int m = 0;
-            while (m < inputArray.GetLength(1))
-            {
-               if (m == inputArray.GetLength(1) - 1)
-               {
-                  //Console.Write(inputArray[l, m]);
-                  Console.Write("{0:f}", inputArray[l, m]);
-                  //Console.Write("{0:f2}", inputArray[l, m]);
-               }
-               else
-               {
-                  //Console.Write(inputArray[l, m] + " ");
-                  Console.Write("{0:f} ", inputArray[l, m]);
-                  //Console.Write("{0:f2} ", inputArray[l, m]);
-               }
-
-               m++;
-            }
-
-            l++;
-            Console.WriteLine();
-         }
-
-         return inputArray;
-      }
-
       public static double[] FindMaxDouble(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
@@ -979,64 +1002,6 @@ namespace Homework_5._3
 
          Console.WriteLine();
          return arrayMax;
-      }
-
-      public static int SearchingNegativeDouble(double[,] inputArray)
-      {
-         int count = 0;
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               if (inputArray[i, j] < 0)
-               {
-                  count++;
-               }
-
-               j++;
-            }
-
-            i++;
-         }
-
-         Console.WriteLine("В массиве отрицательных элементов: {0}", count);
-         if (count == 0)
-         {
-            Console.WriteLine("В массиве нет отрицательных элементов");
-         }
-
-         return count;
-      }
-
-      public static int SearchingNegativeDouble(double[,] inputArray, string nameArray)
-      {
-         int count = 0;
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               if (inputArray[i, j] < 0)
-               {
-                  count++;
-               }
-
-               j++;
-            }
-
-            i++;
-         }
-
-         Console.WriteLine("В двумерном массиве {0} отрицательных элементов: {1}", nameArray, count);
-         if (count == 0)
-         {
-            Console.WriteLine("В двумерном массиве нет отрицательных элементов");
-         }
-
-         return count;
       }
 
       public static bool SearchingPositivDouble(double[,] search)
@@ -1147,11 +1112,6 @@ namespace Homework_5._3
 
          Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1}", nameArray, min);
          return min;
-      }
-
-      public static bool ComparisonNegativeDouble(double negativeOne, double negativeTwo)
-      {
-         return negativeOne > negativeTwo;
       }
 
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
@@ -1318,7 +1278,7 @@ namespace Homework_5._3
          //Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
-         string subLine;
+         string subLine = null;
          int row = 0;
          while (row < inputArray.GetLength(0))
          {
